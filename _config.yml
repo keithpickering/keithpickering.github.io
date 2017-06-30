@@ -1,7 +1,7 @@
 name: "Keith Pickering Design"
 description: "My work portfolio"
 
-url: "http://keithpickering.net"
+url: "https://keithpickering.github.io"
 
 paginate: 8
 paginate_path: /projects/page:num
