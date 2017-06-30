@@ -1,0 +1,39 @@
+.text-input {
+	width: 100%;
+	padding: $half-spacing-unit;
+	border: 0;
+	background-color: $clouds;
+	transition: box-shadow 0.15s;
+	&:hover {
+		background-color: lighten($clouds, 5%);
+		box-shadow: 0 0 0 2px lighten($peter-river, 20%);
+	}
+	&:focus {
+		background-color: white;
+		box-shadow: 0 0 0 4px $peter-river;
+	}
+	@include placeholder {
+		color: $gray-dark;
+	}
+}
+.text-input--large {
+    font-size: $h3-size;
+}
+
+.submit-wrap {
+	position: relative;
+	white-space: nowrap;
+	&:hover {
+		.text-input {
+			background-color: white;
+		}
+	}
+	.btn {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		line-height: 1;
+		box-shadow: inset 0 0 0 2px white;
+	}
+}
