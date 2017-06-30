@@ -6,9 +6,7 @@ url: "https://keithpickering.github.io"
 paginate: 8
 paginate_path: /projects/page:num
 permalink: /:categories/:title
-markdown: rdiscount
-rdiscount:
-    extensions: ['smart']
+markdown: kramdown
 
 keep_files: ["css", "js"] 
 
