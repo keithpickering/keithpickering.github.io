@@ -24,7 +24,7 @@ layout: page-post
 						<span>URL:</span>
 
 						<a href="{{ page.client-url }}">
-							{{ page.client-url | remove: 'http://'' }}
+							{{ page.client-url | remove: 'http://' }}
 						</a>
 
 					{% else %}
@@ -82,7 +82,7 @@ layout: page-post
 							<h2 class="img-grid__title">Gallery</h2>
 							<ul>
 
-								{% for image in page.post-gallery | offset: 1 %}
+								{% for image in page.post-gallery %}
 
 									<li class="flyout">
 										<a class="popup" rel="group" href="{{ site.url }}/images/projects/{{ page.img-dir }}/large/{{ image | map: 'url' }}" title="{{ image | map: 'title' }}">

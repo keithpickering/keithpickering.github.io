@@ -8,5 +8,4 @@ paginate_path: /projects/page:num
 permalink: /:categories/:title
 markdown: kramdown
 
-keep_files: ["css", "js"] 
-
+keep_files: ["css", "js"]
