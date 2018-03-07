@@ -1,7 +1,5 @@
 node_modules
 .sass-cache
-_site
-images/projects
 kpd.sublime-project
 kpd.sublime-workspace
 npm-debug.log

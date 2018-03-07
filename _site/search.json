@@ -1,0 +1,133 @@
+[
+  
+    {
+      "title"    : "CSS Business Card",
+      "category" : "projects and graphic-design",
+      "tags"     : "print",
+      "url"      : "http://localhost:4000/projects/graphic-design/css-business-card",
+      "date"     : "February 2015",
+      "image"    : "http://localhost:4000/images/projects/css-business-card/small/00.jpg",
+      "tools"    : "codepen"
+    } ,
+  
+    {
+      "title"    : "Associated Brokers /SDC",
+      "category" : "projects and web-development",
+      "tags"     : "wordpress",
+      "url"      : "http://localhost:4000/projects/web-development/associated-brokers-sdc",
+      "date"     : "November 2014",
+      "image"    : "http://localhost:4000/images/projects/associated-brokers-sdc/small/00.jpg",
+      "tools"    : "html, css, sass, and wordpress"
+    } ,
+  
+    {
+      "title"    : "WoodyCraft",
+      "category" : "projects and web-development",
+      "tags"     : "forum, xenforo, and minecraft",
+      "url"      : "http://localhost:4000/projects/web-development/woodycraft",
+      "date"     : "November 2014",
+      "image"    : "http://localhost:4000/images/projects/woodycraft/small/00.jpg",
+      "tools"    : "html, css, sass, and xenforo"
+    } ,
+  
+    {
+      "title"    : "Marble Hornets: The Complete Series",
+      "category" : "projects and package-design",
+      "tags"     : "slenderman",
+      "url"      : "http://localhost:4000/projects/package-design/marble-hornets-boxset",
+      "date"     : "November 2014",
+      "image"    : "http://localhost:4000/images/projects/marble-hornets-boxset/small/00.jpg",
+      "tools"    : "photoshop"
+    } ,
+  
+    {
+      "title"    : "Marble Hornets: The Complete Third Season",
+      "category" : "projects and package-design",
+      "tags"     : "slenderman",
+      "url"      : "http://localhost:4000/projects/package-design/marble-hornets-season-3",
+      "date"     : "November 2014",
+      "image"    : "http://localhost:4000/images/projects/marble-hornets-season-3/small/00.jpg",
+      "tools"    : "photoshop and other"
+    } ,
+  
+    {
+      "title"    : "Craftilldawn Premium Buycraft Theme",
+      "category" : "projects and web-development",
+      "tags"     : "theme and minecraft",
+      "url"      : "http://localhost:4000/projects/web-development/craftilldawn-buycraft-premium",
+      "date"     : "May 2014",
+      "image"    : "http://localhost:4000/images/projects/craftilldawn-buycraft-premium/small/00.jpg",
+      "tools"    : "html, css, and sass"
+    } ,
+  
+    {
+      "title"    : "Marble Hornets: The Complete Second Season",
+      "category" : "projects and package-design",
+      "tags"     : "slenderman",
+      "url"      : "http://localhost:4000/projects/package-design/marble-hornets-season-2",
+      "date"     : "November 2013",
+      "image"    : "http://localhost:4000/images/projects/marble-hornets-season-2/small/00.jpg",
+      "tools"    : "photoshop"
+    } ,
+  
+    {
+      "title"    : "The Moths and the PC&#39;s",
+      "category" : "projects and graphic-design",
+      "tags"     : "composite",
+      "url"      : "http://localhost:4000/projects/graphic-design/computer-moth",
+      "date"     : "May 2013",
+      "image"    : "http://localhost:4000/images/projects/computer-moth/small/00.jpg",
+      "tools"    : "photography and photoshop"
+    } ,
+  
+    {
+      "title"    : "Level Up",
+      "category" : "projects and logo-design",
+      "tags"     : "gaming and branding",
+      "url"      : "http://localhost:4000/projects/logo-design/level-up",
+      "date"     : "February 2013",
+      "image"    : "http://localhost:4000/images/projects/level-up/small/00.jpg",
+      "tools"    : "illustrator and photoshop"
+    } ,
+  
+    {
+      "title"    : "Lightpaper Icon",
+      "category" : "projects and graphic-design",
+      "tags"     : "icon",
+      "url"      : "http://localhost:4000/projects/graphic-design/lightpaper",
+      "date"     : "January 2013",
+      "image"    : "http://localhost:4000/images/projects/lightpaper/small/00.jpg",
+      "tools"    : "illustrator"
+    } ,
+  
+    {
+      "title"    : "Internet Friendship Rainbow of Love",
+      "category" : "projects and illustration",
+      "tags"     : "Keith",
+      "url"      : "http://localhost:4000/projects/illustration/friendship-rainbow",
+      "date"     : "January 2013",
+      "image"    : "http://localhost:4000/images/projects/friendship-rainbow/small/00.jpg",
+      "tools"    : "illustrator and photoshop"
+    } ,
+  
+    {
+      "title"    : "Creation of Snuckles",
+      "category" : "projects and illustration",
+      "tags"     : "Snuckles",
+      "url"      : "http://localhost:4000/projects/illustration/creation-of-snuckles",
+      "date"     : "January 2012",
+      "image"    : "http://localhost:4000/images/projects/creation-of-snuckles/small/00.jpg",
+      "tools"    : "illustrator and photoshop"
+    } ,
+  
+    {
+      "title"    : "Timasky",
+      "category" : "projects and illustration",
+      "tags"     : "Marble Hornets, slenderman, and painting",
+      "url"      : "http://localhost:4000/projects/illustration/timasky",
+      "date"     : "January 2012",
+      "image"    : "http://localhost:4000/images/projects/timasky/small/00.jpg",
+      "tools"    : "photoshop"
+    } 
+  
+]
