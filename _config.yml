@@ -1,11 +1,3 @@
-name: "Keith Pickering Design"
-description: "My work portfolio"
-
-url: "https://keithpickering.github.io"
-
-paginate: 8
-paginate_path: /projects/page:num
-permalink: /:categories/:title
-markdown: kramdown
-
-keep_files: ["css", "js"]
+sass:
+    sass_dir: _sass
+    style: compressed

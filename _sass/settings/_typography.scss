@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'novecento_sans_wide_bookbold';
+    src: url('/assets/fonts/Novecentosanswide-Bold-webfont.eot');
+    src: url('/assets/fonts/Novecentosanswide-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/Novecentosanswide-Bold-webfont.woff') format('woff'),
+         url('/assets/fonts/Novecentosanswide-Bold-webfont.ttf') format('truetype'),
+         url('/assets/fonts/Novecentosanswide-Bold-webfont.svg#novecento_sans_wide_bookbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+$heading-font: "novecento_sans_wide_bookbold";
