@@ -2,11 +2,7 @@
 	display: grid;
 	grid-gap: $spacing;
 	grid-template-columns: repeat(2, 1fr);
-	height: calc(100vh - #{$header-height-mobile} - #{$spacing-xl});
-
-	@include mq($from: tablet) {
-		height: calc(100vh - #{$header-height-desk} - #{$spacing-xl});
-	}
+	padding: $spacing 0;
 
 	&__item {
 		position: relative;
@@ -15,16 +11,16 @@
 		text-decoration: none;
 
 		&--art {
-			background: material-color('blue', '400');
+			background: $color-art;
 		}
 		&--code {
-			background: material-color('orange', '400');
+			background: $color-code;
 		}
 		&--music {
-			background: material-color('purple', '300');
+			background: $color-music;
 		}
 		&--hireme {
-			background: material-color('green', '400')
+			background: $color-hireme;
 		}
 
 		> span {

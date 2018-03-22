@@ -1,0 +1,26 @@
+.page-title {
+	width: 100%;
+	margin-bottom: $spacing;
+	padding: $spacing-xl 0;
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 1;
+	color: white;
+	
+	.page--art & {
+		background: $color-art;
+	}
+
+	.page--code & {
+		background: $color-code;
+	}
+
+	.page--music & {
+		background: $color-music;
+	}
+
+	h1 {
+		font-family: "Novecento Light";
+		margin-bottom: 0;
+	}
+}

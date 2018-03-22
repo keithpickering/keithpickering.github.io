@@ -1,0 +1,18 @@
+.post {
+	margin-bottom: $spacing;
+	padding: $spacing;
+	background: white;
+	border: 1px solid material-color('blue-grey', '100');
+
+	&__header {
+		margin-bottom: $spacing;
+
+		&__title {
+			font-size: $gamma;
+
+			> a {
+				color: inherit;
+			}
+		}
+	}
+}

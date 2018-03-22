@@ -1,14 +1,14 @@
 ---
 ---
 
-// Settings
-@import "settings/vars";
-@import "settings/typography";
-
 // Tools
 @import "tools/mq";
 @import "tools/font-face";
 @import "tools/sass-material-colors";
+
+// Settings
+@import "settings/vars";
+@import "settings/typography";
 
 // Elements
 @import "elements/base";
@@ -24,3 +24,5 @@
 @import "components/page-head";
 @import "components/page-body";
 @import "components/keith";
+@import "components/page-title";
+@import "components/post";

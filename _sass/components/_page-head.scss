@@ -1,11 +1,8 @@
 .page-head {
 	padding: $spacing 0;
-	height: $header-height-mobile;
 	text-align: center;
-
-	@include mq($from: tablet) {
-		height: $header-height-desk;
-	}
+	background: material-color('blue-grey', '800');
+	color: white;
 
 	&__logo {
 		margin-bottom: $spacing-sm;
@@ -43,31 +40,28 @@
 			}
 
 			> a {
-				color: material-color('blue-grey', '900');
-				background: white;
-				border: 1px solid material-color('blue-grey', '100');
+				color: white;
+				background: material-color('blue-grey', '700');
 				border-radius: 50%;
 				width: $spacing-lg;
 				height: $spacing-lg;
 				line-height: $spacing-lg;
-				transition: box-shadow 100ms;
+				transition: all 100ms;
+
+				&:hover {
+					box-shadow: 0 1px 1px 0 rgba(material-color('blue-grey', '900'), 0.95), 0 2px 8px 0 rgba(material-color('blue-grey', '900'), 0.5);
+				}
 
 				&.icon--fb:hover {
-					color: $color-fb;
-					border-color: lighten($color-fb, 30%);
-					box-shadow: 0 1px 1px 0 lighten($color-fb, 30%), 0 2px 8px 0 material-color('blue-grey', '100');
+					background-color: $color-fb;
 				}
 
 				&.icon--twit:hover {
-					color: $color-twit;
-					border-color: lighten($color-twit, 10%);
-					box-shadow: 0 1px 1px 0 lighten($color-twit, 10%), 0 2px 8px 0 material-color('blue-grey', '100');
+					background-color: $color-twit;
 				}
 
 				&.icon--insta:hover {
-					color: $color-insta;
-					border-color: lighten($color-insta, 20%);
-					box-shadow: 0 1px 1px 0 lighten($color-insta, 20%), 0 2px 8px 0 material-color('blue-grey', '100');
+					background-color: $color-insta;
 				}
 			}
 		}

@@ -44,6 +44,34 @@ var Header = {
 	}
 };
 
+var HomePage = {
+	settings: {
+		gridElem: document.getElementById("home-grid"),
+		headerElem: document.getElementById("page-head")
+	},
+
+	sizeGrid: function() {
+		var headerH = this.settings.headerElem.offsetHeight;
+		var viewportH = window.innerHeight;
+		var gridH = viewportH - headerH;
+
+		this.settings.gridElem.style.height = gridH + 'px';
+	},
+
+	init: function() {
+		var homePage = this;
+		homePage.sizeGrid();
+
+		window.addEventListener("resize", function() {
+			homePage.sizeGrid();
+		});
+	}
+};
+
 (function() {
 	Header.init();
+
+	if (document.getElementById("home-grid")) {
+		HomePage.init();
+	}
 })();

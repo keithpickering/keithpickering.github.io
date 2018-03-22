@@ -7,10 +7,10 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i" rel="stylesheet">
 	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
 </head>
-<body>
-	<header class="page-head">
+<body class="{{ page.pageClass }}">
+	<header id="page-head" class="page-head">
 		<h1 class="page-head__logo">
-			<a href="{{ site.baseurl }}">{{ site.name }}</a>
+			<a href="{{ site.baseurl }}/">{{ site.name }}</a>
 		</h1>
 		<span id="page-head-tagline" class="page-head__tagline" style="display:none;">A guy who does things</span>
 		<ul class="page-head__social">
@@ -26,11 +26,11 @@
 		</ul>
 	</header>
 
-	<main class="page-body">
+	<main id="page-body" class="page-body">
 		{{ content }}
 	</main>
 
-	<footer class="page-foot">
+	<footer id="page-foot" class="page-foot">
 
 	</footer>
 
