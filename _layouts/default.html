@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Home |  Keith Pickering</title>
+	<title>{% if page.title %} {{ page.title }} | {% endif %} {{ site.name }}</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i" rel="stylesheet">
-	<link rel="stylesheet" href="/assets/css/main.css">
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
 </head>
 <body>
 	<header class="page-head">
 		<h1 class="page-head__logo">
-			<a href="">Keith Pickering</a>
+			<a href="{{ site.baseurl }}">{{ site.name }}</a>
 		</h1>
 		<span id="page-head-tagline" class="page-head__tagline" style="display:none;">A guy who does things</span>
 		<ul class="page-head__social">
@@ -27,29 +27,13 @@
 	</header>
 
 	<main class="page-body">
-		<div class="wrapper wrapper--padded">
-	<section class="home-grid">
-		<a href="/art" class="home-grid__item home-grid__item--art">
-			<span>Art</span>
-		</a>
-		<a href="/code" class="home-grid__item home-grid__item--code">
-			<span>Code</span>
-		</a>
-		<a href="/music" class="home-grid__item home-grid__item--music">
-			<span>Music</span>
-		</a>
-		<a href="/hireme" class="home-grid__item home-grid__item--hireme">
-			<span>Hire Me</span>
-		</a>
-	</section>
-	<div class="keith"></div>
-</div>
+		{{ content }}
 	</main>
 
 	<footer class="page-foot">
 
 	</footer>
 
-	<script src="/assets/js/main.js"></script>
+	<script src="{{ site.baseurl }}/assets/js/main.js"></script>
 </body>
 </html>

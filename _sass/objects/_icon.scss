@@ -1,0 +1,34 @@
+.icon {
+	position: relative;
+	display: inline-block;
+	width: $spacing;
+	height: $spacing;
+	font-size: $epsilon;
+
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		font-family: "Brand Logos";
+	}
+
+	&--fb {
+		&:before {
+			content: "\f39e";
+		}
+	}
+
+	&--twit {
+		&:before {
+			content: "\f099";
+		}
+	}
+
+	&--insta {
+		&:before {
+			content: "\f16d";
+		}
+	}
+}

@@ -1,5 +1,25 @@
+@include font-face("Novecento Bold", "/assets/fonts/Novecentosanswide-Bold-webfont/Novecentosanswide-Bold-webfont");
+@include font-face("Novecento Light", "/assets/fonts/Novecentosanswide-Light-webfont/Novecentosanswide-Light-webfont");
+@include font-face("Brand Logos", "/assets/fonts/font-awesome-brands/fa-brands-400");
+
 *,
 *:before,
 *:after {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	min-height: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: $body-font;
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+	background: linear-gradient(to top, white 70%, material-color('blue-grey', '100') 100%);
+	color: material-color('blue-grey', '900');
 }

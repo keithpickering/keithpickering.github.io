@@ -3,8 +3,24 @@
 
 // Settings
 @import "settings/vars";
-@import "settings/colors";
 @import "settings/typography";
+
+// Tools
+@import "tools/mq";
+@import "tools/font-face";
+@import "tools/sass-material-colors";
 
 // Elements
 @import "elements/base";
+@import "elements/headings";
+@import "elements/links";
+
+// Objects
+@import "objects/icon";
+@import "objects/wrapper";
+
+// Components
+@import "components/home-grid";
+@import "components/page-head";
+@import "components/page-body";
+@import "components/keith";

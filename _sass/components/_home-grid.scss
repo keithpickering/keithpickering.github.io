@@ -1,0 +1,40 @@
+.home-grid {
+	display: grid;
+	grid-gap: $spacing;
+	grid-template-columns: repeat(2, 1fr);
+	height: calc(100vh - #{$header-height-mobile} - #{$spacing-xl});
+
+	@include mq($from: tablet) {
+		height: calc(100vh - #{$header-height-desk} - #{$spacing-xl});
+	}
+
+	&__item {
+		position: relative;
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+
+		&--art {
+			background: material-color('blue', '400');
+		}
+		&--code {
+			background: material-color('orange', '400');
+		}
+		&--music {
+			background: material-color('purple', '300');
+		}
+		&--hireme {
+			background: material-color('green', '400')
+		}
+
+		> span {
+			display: block;
+			width: 100%;
+			text-align: center;
+			text-transform: uppercase;
+			font-family: $heading-font-light;
+			font-size: 7vw;
+			color: white;
+		}
+	}
+}

@@ -1,0 +1,14 @@
+.wrapper {
+	width: 100%;
+	max-width: 1400px;
+	margin-left: auto;
+	margin-right: auto;
+
+	&--padded {
+		padding: 0 $spacing;
+	}
+
+	@include mq($from: tablet) {
+		width: 80%;
+	}
+}

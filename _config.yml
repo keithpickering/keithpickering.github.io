@@ -1,3 +1,7 @@
+name: Keith Pickering
+baseurl:
+markdown: rdiscount
+permalink: pretty
 sass:
     sass_dir: _sass
     style: compressed

@@ -1,0 +1,29 @@
+h1, h2, h3,
+h4, h5, h6 {
+	margin-bottom: $spacing;
+	font-family: $heading-font-bold;
+}
+
+h1, .alpha {
+	font-size: $alpha;
+}
+
+h2, .beta {
+	font-size: $beta;
+}
+
+h3, .gamma {
+	font-size: $gamma;
+}
+
+h4, .delta {
+	font-size: $delta;
+}
+
+h5, .epsilon {
+	font-size: $epsilon;
+}
+
+h6, .zeta {
+	font-size: $zeta;
+}
