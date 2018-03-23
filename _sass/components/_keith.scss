@@ -12,7 +12,6 @@
 	transition: all 200ms;
 
 	@include mq($from: desktop) {
-		top: calc(50% + #{$header-height-desk}/2);
 		height: 50vh;
 		width: 20vh;
 	}
