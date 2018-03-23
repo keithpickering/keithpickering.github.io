@@ -9,6 +9,7 @@
 	background-size: contain;
 	background-position: center center;
 	pointer-events: none;
+	transition: all 200ms;
 
 	@include mq($from: desktop) {
 		top: calc(50% + #{$header-height-desk}/2);

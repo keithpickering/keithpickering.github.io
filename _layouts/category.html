@@ -2,14 +2,28 @@
 layout: page
 ---
 
-{% for post in site.categories[page.category] %}
-	<article class="post post--excerpt">
-	    <header class="post__header">
-	    	<h2 class="post__header__title">
-	    		<a href="{{ post.url | absolute_url }}">
-		    		{{ post.title }}
-		    	</a>
-		    </h2>
-	    </header>
-	</article>
-{% endfor %}
+<div class="posts posts--{{ page.category }}">
+	{% if site.categories[page.category] == null %}
+		<p class="no-posts">No posts yet in this category.</p>
+	{% else %}
+		{% for post in site.categories[page.category] %}
+			<article class="post post--excerpt post--{{ post.categories[0] }}">
+				{% if post.image %}
+					<a href="{{ post.url | absolute_url }}" class="post--excerpt__image">
+						<img src="/assets/images/posts{{ post.permalink }}{{ post.image }}" alt="">
+					</a>
+				{% endif %}
+			    <header class="post__header">
+			    	<h2 class="post__header__title">
+			    		<a href="{{ post.url | absolute_url }}">
+				    		{{ post.title }}
+				    	</a>
+				    </h2>
+			    </header>
+			    <section class="post__content">
+			    	{{ post.content }}
+			    </section>
+			</article>
+		{% endfor %}
+	{% endif %}
+</div>

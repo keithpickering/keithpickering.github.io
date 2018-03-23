@@ -31,4 +31,11 @@
 			content: "\f16d";
 		}
 	}
+
+	&--email {
+		&:before {
+			font-family: "FontAwesome";
+			content: "\f0e0";
+		}
+	}
 }

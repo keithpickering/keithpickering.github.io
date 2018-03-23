@@ -17,7 +17,7 @@
 	}
 
 	&__tagline {
-		margin-bottom: $spacing-sm;
+		margin-bottom: $spacing;
 		font-size: $zeta;
 		line-height: 1.4;
 
@@ -34,18 +34,21 @@
 		> li {
 			list-style: none;
 			margin-right: $spacing-sm;
+			width: $spacing-lg;
+			height: $spacing-lg;
+			line-height: $spacing-lg;
 
 			&:last-child {
 				margin-right: 0;
 			}
 
 			> a {
+				display: block;
+				width: 100%;
+				height: 100%;
 				color: white;
 				background: material-color('blue-grey', '700');
 				border-radius: 50%;
-				width: $spacing-lg;
-				height: $spacing-lg;
-				line-height: $spacing-lg;
 				transition: all 100ms;
 
 				&:hover {
@@ -62,6 +65,10 @@
 
 				&.icon--insta:hover {
 					background-color: $color-insta;
+				}
+
+				&.icon--email:hover {
+					background-color: material-color('green', '400');
 				}
 			}
 		}

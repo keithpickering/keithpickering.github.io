@@ -1,5 +1,14 @@
-.post {
+.posts {
 	margin-bottom: $spacing;
+
+	&--art {
+		display: grid;
+		grid-gap: $spacing;
+		grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+	}
+}
+
+.post {
 	padding: $spacing;
 	background: white;
 	border: 1px solid material-color('blue-grey', '100');
@@ -9,10 +18,36 @@
 
 		&__title {
 			font-size: $gamma;
+			line-height: $gamma;
 
 			> a {
 				color: inherit;
+
+				&:hover {
+					color: $link-color;
+				}
 			}
 		}
 	}
+
+	&--excerpt {
+		&__image {
+			display: block;
+			width: calc(100% + $spacing*2);
+			margin-bottom: $spacing;
+			margin-left: -$spacing;
+			margin-right: -$spacing;
+			margin-top: -$spacing;
+			border-bottom: 1px solid material-color('blue-grey', '100');
+
+			> img {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+}
+
+.no-posts {
+	text-align: center;
 }
