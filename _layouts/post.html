@@ -1,5 +1,21 @@
 ---
-layout: page
+layout: default
 ---
 
-{{ content }}
+<article class="post post--full post--{{ page.categories[0] }}">
+	{% if page.image %}
+		<div class="post__image">
+			<img src="/assets/images/posts{{ page.permalink }}{{ page.image }}" alt="">
+		</div>
+	{% endif %}
+	<header class="page-title">
+		<div class="wrapper wrapper--padded">
+			<h1>{{ page.title }}</h1>
+		</div>
+	</header>
+	<section class="post__content">
+		<div class="wrapper wrapper--padded">
+			{{ content }}
+		</div>
+	</section>
+</article>

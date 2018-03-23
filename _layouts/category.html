@@ -9,7 +9,7 @@ layout: page
 		{% for post in site.categories[page.category] %}
 			<article class="post post--excerpt post--{{ post.categories[0] }}">
 				{% if post.image %}
-					<a href="{{ post.url | absolute_url }}" class="post--excerpt__image">
+					<a href="{{ post.url | absolute_url }}" class="post__image">
 						<img src="/assets/images/posts{{ post.permalink }}{{ post.image }}" alt="">
 					</a>
 				{% endif %}
@@ -21,7 +21,7 @@ layout: page
 				    </h2>
 			    </header>
 			    <section class="post__content">
-			    	{{ post.content }}
+			    	{{ post.excerpt }}
 			    </section>
 			</article>
 		{% endfor %}

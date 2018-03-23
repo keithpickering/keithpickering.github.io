@@ -7,4 +7,8 @@ permalink: /super-mario-stonedshine/
 image: "main.png"
 ---
 
-This is an art post
+<p class="post__excerpt">
+	This is the excerpt. It shows up at the top of the post.
+</p>
+
+And this is the actual post content.
