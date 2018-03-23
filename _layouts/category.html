@@ -9,7 +9,7 @@ layout: page
 		{% for post in site.categories[page.category] %}
 			<article class="post post--excerpt post--{{ post.categories[0] }}">
 				{% if post.image %}
-					<a href="{{ post.url | absolute_url }}" class="post__image">
+					<a href="{{ post.url | absolute_url }}" class="post__image post--excerpt__image">
 						<img src="/assets/images/posts{{ post.permalink }}{{ post.image }}" alt="">
 					</a>
 				{% endif %}

@@ -7,7 +7,7 @@ permalink: /super-mario-stonedshine/
 image: "main.png"
 ---
 
-<p class="post__excerpt">
+<p class="post--full__excerpt">
 	This is the excerpt. It shows up at the top of the post.
 </p>
 
