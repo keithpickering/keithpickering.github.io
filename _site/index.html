@@ -15,18 +15,40 @@
 		<span id="page-head-tagline" class="page-head__tagline" style="display:none;">A guy who does things</span>
 		<ul class="page-head__social">
 			<li>
-				<a href="" class="icon icon--fb"></a>
+				<a href="" class="facebook">
+					<i class="fa-fw fab fa-facebook-f"></i>
+				</a>
 			</li>
 			<li>
-				<a href="" class="icon icon--twit"></a>
+				<a href="" class="twitter">
+					<i class="fa-fw fab fa-twitter"></i>
+				</a>
 			</li>
 			<li>
-				<a href="" class="icon icon--insta"></a>
+				<a href="" class="instagram">
+					<i class="fa-fw fab fa-instagram"></i>
+				</a>
 			</li>
 			<li>
-				<a href="mailto:keithpickering@outlook.com" class="icon icon--email"></a>
+				<a href="" class="envelope">
+					<i class="fa-fw far fa-envelope"></i>
+				</a>
 			</li>
 		</ul>
+		<button id="page-search-toggle" class="page-search-toggle icon icon--search">
+			<span class="accessibility">Search</span>
+		</button>
+		<div id="page-search" class="page-search">
+			<div class="text-input-btn">
+				<input id="page-search-input" class="text-input page-search__input" placeholder="Search...">
+				<button id="search-close" class="btn">
+					<span class="icon icon--close"></span>
+				</button>
+			</div>
+
+			<ul id="page-search-results" class="page-search__results">
+			</ul>
+		</div>
 	</header>
 
 	<main id="page-body" class="page-body">
@@ -53,6 +75,7 @@
 		&copy; 2018 Keith Pickering
 	</footer>
 
+	<script src="/assets/js/search.js"></script>
 	<script src="/assets/js/main.js"></script>
 </body>
 </html>

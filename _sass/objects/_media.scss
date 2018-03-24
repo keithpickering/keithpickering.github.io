@@ -1,0 +1,23 @@
+.media {
+	margin-bottom: $spacing;
+	display: flex;
+	align-items: flex-start;
+	width: 100%;
+
+	&__img {
+		margin-right: $spacing;
+	}
+
+	&__body {
+		flex: 1;
+		text-align: left;
+	}
+
+	&--middle {
+		align-items: center;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}

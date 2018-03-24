@@ -3,8 +3,8 @@ $spacing-sm: 12px;
 $spacing-lg: 36px;
 $spacing-xl: 48px;
 
-$header-height-desk: 180px;
 $header-height-mobile: 180px;
+$header-height-desktop: 180px;
 
 // Social colors
 $color-fb: #3b5999;
@@ -17,4 +17,6 @@ $color-code: material-color('orange', '400');
 $color-music: material-color('purple', '300');
 $color-hireme: material-color('green', '400');
 
+// Links
 $link-color: material-color('blue', '400');
+

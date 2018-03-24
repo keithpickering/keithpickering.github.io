@@ -5,6 +5,10 @@
 @import "tools/mq";
 @import "tools/font-face";
 @import "tools/sass-material-colors";
+$fa-font-path: "/assets/fonts/fontawesome";
+@import "tools/fontawesome/fa-brands";
+@import "tools/fontawesome/fa-regular";
+@import "tools/fontawesome/fontawesome";
 
 // Settings
 @import "settings/vars";
@@ -18,12 +22,19 @@
 // Objects
 @import "objects/icon";
 @import "objects/wrapper";
+@import "objects/text-input";
+@import "objects/btn";
+@import "objects/media";
 
 // Components
 @import "components/home-grid";
 @import "components/page-head";
+@import "components/page-search";
 @import "components/page-body";
 @import "components/keith";
 @import "components/page-title";
 @import "components/post";
 @import "components/page-foot";
+
+// Utilities
+@import "utilities/accessibility";

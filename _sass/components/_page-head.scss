@@ -36,7 +36,7 @@
 			margin-right: $spacing-sm;
 			width: $spacing-lg;
 			height: $spacing-lg;
-			line-height: $spacing-lg;
+			line-height: $spacing-lg + 1;
 
 			&:last-child {
 				margin-right: 0;
@@ -46,6 +46,7 @@
 				display: block;
 				width: 100%;
 				height: 100%;
+				padding-left: 1px;
 				color: white;
 				background: material-color('blue-grey', '700');
 				border-radius: 50%;
@@ -55,22 +56,23 @@
 					box-shadow: 0 1px 1px 0 rgba(material-color('blue-grey', '900'), 0.95), 0 2px 8px 0 rgba(material-color('blue-grey', '900'), 0.5);
 				}
 
-				&.icon--fb:hover {
+				&.facebook:hover {
 					background-color: $color-fb;
 				}
 
-				&.icon--twit:hover {
+				&.twitter:hover {
 					background-color: $color-twit;
 				}
 
-				&.icon--insta:hover {
+				&.instagram:hover {
 					background-color: $color-insta;
 				}
 
-				&.icon--email:hover {
+				&.envelope:hover {
 					background-color: material-color('green', '400');
 				}
 			}
 		}
 	}
 }
+

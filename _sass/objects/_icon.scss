@@ -11,31 +11,59 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		font-family: "Brand Logos";
 	}
 
-	&--fb {
+	&--search {
+		width: 24px;
+		height: 24px;
 		&:before {
-			content: "\f39e";
+			content: "";
+			width: 20px;
+			height: 20px;
+			border: 2px solid material-color('blue-grey', '500');
+			border-radius: 50%;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			top: 15px;
+			left: 19px;
+			width: 2px;
+			height: 10px;
+			transform: rotate(-45deg);
+			background: material-color('blue-grey', '500');
+		}
+
+		.btn &:before {
+			border-color: white;
+		}
+
+		.btn &:after {
+			background: white;
 		}
 	}
 
-	&--twit {
-		&:before {
-			content: "\f099";
-		}
-	}
+	&--close {
+		width: 24px;
+		height: 24px;
 
-	&--insta {
-		&:before {
-			content: "\f16d";
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 11px;
+			width: 2px;
+			height: 24px;
+			background: material-color('blue-grey', '300');
 		}
-	}
 
-	&--email {
 		&:before {
-			font-family: "FontAwesome";
-			content: "\f0e0";
+			transform: rotate(-45deg);
+		}
+
+		&:after {
+			transform: rotate(45deg);
 		}
 	}
 }

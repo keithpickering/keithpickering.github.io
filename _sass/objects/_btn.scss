@@ -1,0 +1,16 @@
+.btn {
+	display: inline-block;
+	height: $spacing-lg;
+	line-height: $spacing-lg;
+	padding: $spacing-sm/2 $spacing-sm;
+	font-family: $heading-font-light;
+	text-transform: uppercase;
+	border: 0;
+	outline: 0;
+	color: white;
+	cursor: pointer;
+
+	&--default {
+		background: material-color('blue', '400');
+	}
+}

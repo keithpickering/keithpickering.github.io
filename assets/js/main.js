@@ -80,6 +80,104 @@ var Page = {
 	}
 };
 
+var sjs,
+    Search = {
+	settings: {
+		searchToggleElem: document.getElementById("page-search-toggle"),
+		searchElem: document.getElementById("page-search"),
+		searchResultsElem: document.getElementById("page-search-results"),
+		searchInputElem: document.getElementById("page-search-input"),
+		searchCloseElem: document.getElementById("search-close")
+	},
+
+	searchOpen: false,
+
+	resultsOpen: false,
+
+	openSearch: function() {
+		this.settings.searchElem.classList.add("page-search--open");
+		this.settings.searchInputElem.focus();
+		this.searchOpen = true;
+	},
+
+	closeSearch: function() {
+		this.settings.searchElem.classList.remove("page-search--open");
+		this.searchOpen = false;
+	},
+
+	toggleSearch: function() {
+		if (this.searchOpen) {
+			this.closeSearch();
+		} else {
+			this.openSearch();
+		}
+	},
+
+	openResults: function() {
+		this.settings.searchResultsElem.classList.add("page-search__results--open");
+		this.searchOpen = true;
+	},
+
+	closeResults: function() {
+		this.settings.searchResultsElem.classList.remove("page-search__results--open");
+		this.searchOpen = false;
+	},
+
+	toggleResults: function() {
+		if (this.resultsOpen) {
+			this.closeResults();
+		} else {
+			this.openResults();
+		}
+	},
+
+	init: function() {
+		var search = this;
+		var searchToggleElem = search.settings.searchToggleElem;
+		var searchElem = search.settings.searchElem;
+		var searchResultsElem = search.settings.searchResultsElem;
+		var searchInputElem = search.settings.searchInputElem;
+		var searchCloseElem = search.settings.searchCloseElem;
+
+		sjs = SimpleJekyllSearch({
+		  searchInput: searchInputElem,
+		  resultsContainer: searchResultsElem,
+		  json: '/search.json',
+		  searchResultTemplate: '<li class="media media--middle">'+
+									'<img class="media__img" src="/assets/images/posts{permalink}{image}" alt="">'+
+									'<div class="media__body">'+
+										'<a href="{url}" title="{desc}">{title}</a>'+
+									'</div>'+
+								'</li>',
+          noResultsText: '<li>No results found</li>',
+          fuzzy: true
+		});
+
+		document.addEventListener("click", function(e) {
+			if (searchElem != e.target && searchToggleElem != e.target && searchInputElem != e.target
+				&& !searchToggleElem.contains(e.target) && !searchElem.contains(e.target)) {
+				search.closeSearch();
+			}
+		});
+
+		searchInputElem.addEventListener("input", function() {
+			if (!search.resultsOpen) {
+				search.openResults();
+			}
+		}, false);
+
+		searchToggleElem.addEventListener("click", function(e) {
+			e.preventDefault();
+			search.toggleSearch();
+		});
+
+		searchCloseElem.addEventListener("click", function(e) {
+			e.preventDefault();
+			search.closeSearch();
+		});
+	}
+};
+
 var Post = {
 	settings: {
 		pageTitleElem: document.getElementById("page-title"),
@@ -134,6 +232,7 @@ var Post = {
 
 (function() {
 	Page.init();
+	Search.init();
 
 	if (document.getElementsByClassName("post--full").length) {
 		Post.init();
