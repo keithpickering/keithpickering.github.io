@@ -24,6 +24,10 @@ body {
 	color: material-color('blue-grey', '900');
 }
 
+.preload * {
+	transition: none !important;
+}
+
 p {
 	margin-bottom: $spacing;
 

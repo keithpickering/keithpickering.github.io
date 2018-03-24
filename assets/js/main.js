@@ -77,6 +77,11 @@ var Page = {
 				page.sizeGrid();
 			});
 		}
+
+		// Remove preload class to enable transitions
+		document.addEventListener("DOMContentLoaded", function() {
+			document.body.classList.remove("preload");
+		});
 	}
 };
 
@@ -149,7 +154,7 @@ var sjs,
 										'<a href="{url}" title="{desc}">{title}</a>'+
 									'</div>'+
 								'</li>',
-          noResultsText: '<li>No results found</li>',
+          noResultsText: '<li class="page-search__noresults">No results found</li>',
           fuzzy: true
 		});
 
@@ -161,8 +166,11 @@ var sjs,
 		});
 
 		searchInputElem.addEventListener("input", function() {
-			if (!search.resultsOpen) {
+			var val = searchInputElem.value;
+			if (!search.resultsOpen && val.length) {
 				search.openResults();
+			} else {
+				search.closeResults();
 			}
 		}, false);
 
@@ -206,25 +214,25 @@ var Post = {
 	},
 
 	init: function() {
-		var page = this;
-		var pageTitleElem = page.settings.pageTitleElem;
-		var postImageElem = page.settings.postImageElem;
-		var postContentElem = page.settings.postContentElem;
-		var headerElem = page.settings.headerElem;
+		var post = this;
+		var postTitleElem = post.settings.postTitleElem;
+		var postImageElem = post.settings.postImageElem;
+		var postContentElem = post.settings.postContentElem;
+		var headerElem = post.settings.headerElem;
 
 		if (postImageElem) {
 			postImageElem.setAttribute('data-natural-height', postImageElem.offsetHeight);
-			page.sizePostImage();
+			post.sizePostImage();
 			window.addEventListener("resize", function() {
 				postImageElem.style.height = null;
 				postImageElem.setAttribute('data-natural-height', postImageElem.offsetHeight);
-				page.sizePostImage();
-				page.stickPostTitle();
+				post.sizePostImage();
+				post.stickPostTitle();
 			});
 
-			page.stickPostTitle();
+			post.stickPostTitle();
 			window.addEventListener("scroll", function() {
-				page.stickPostTitle();
+				post.stickPostTitle();
 			});
 		}
 	}
