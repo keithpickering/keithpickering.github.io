@@ -22,7 +22,6 @@
 	top: 0;
 	right: 0;
 	width: 100%;
-	max-width: 320px;
 	padding: $spacing;
 	padding-top: $spacing;
 	transition: transform 500ms;
@@ -35,6 +34,10 @@
 
 	&--open {
 		transform: none;
+	}
+
+	@include mq($from: tablet) {
+		max-width: 320px;
 	}
 
 	.text-input-btn {
@@ -54,7 +57,6 @@
 		top: 0;
 		right: 0;
 		width: 100%;
-		max-width: 320px;
 		max-height: 100vh;
 		overflow-y: auto;
 		list-style: none;
@@ -65,6 +67,10 @@
 		border-left: 1px solid material-color('blue-grey', '100');
 		transform: translate(0, -100%);
 		transition: transform 1s;
+
+		@include mq($from: tablet) {
+			max-width: 320px;
+		}
 
 		&--open {
 			transform: none;

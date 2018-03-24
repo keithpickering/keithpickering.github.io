@@ -8,8 +8,12 @@
 		margin-bottom: $spacing-sm;
 		text-transform: uppercase;
 		font-family: $heading-font-bold;
-		font-size: $gamma;
+		font-size: 28px;
 		line-height: $gamma;
+
+		@include mq($from: tablet) {
+			font-size: $gamma;
+		}
 
 		> a {
 			color: inherit;
