@@ -13,7 +13,6 @@
 	transition: box-shadow 100ms;
 
 	&:focus {
-		box-shadow: 0 1px 1px 0 rgba(material-color('blue-grey', '900'), 0.35), 0 2px 8px 0 rgba(material-color('blue-grey', '900'), 0.15);
 	}
 }
 
@@ -22,7 +21,7 @@
 	width: 100%;
 
 	& > .text-input {
-
+		margin-right: $spacing-sm;
 	}
 
 	& > .btn {
