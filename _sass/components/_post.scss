@@ -35,7 +35,7 @@
 		width: 100%;
 		background: material-color('blue-grey', '900');
 
-		> img {
+		img {
 			display: block;
 			height: 100%;
 			width: 100%;
@@ -62,6 +62,11 @@
 			font-size: $delta;
 			font-style: italic;
 			color: material-color('blue-grey', '200');
+		}
+
+		.post__content {
+			padding-top: $spacing-xl;
+			padding-bottom: $spacing-xl;
 		}
 	}
 }

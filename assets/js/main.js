@@ -195,7 +195,8 @@ var Post = {
 	},
 
 	sizePostImage: function() {
-		var h = window.innerHeight - this.settings.pageTitleElem.offsetHeight;
+		//var h = window.innerHeight - this.settings.pageTitleElem.offsetHeight;
+		var h = window.innerHeight;
 		if (h < this.settings.postImageElem.getAttribute('data-natural-height')) {
 			this.settings.postImageElem.style.height = h + "px";
 		}

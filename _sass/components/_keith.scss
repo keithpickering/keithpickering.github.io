@@ -1,6 +1,6 @@
 .keith {
 	position: absolute;
-	top: calc(50% + #{$header-height-mobile}/2);
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%); 
 	height: 30vh;

@@ -1,4 +1,5 @@
 .home-grid {
+	position: relative;
 	display: grid;
 	grid-gap: $spacing;
 	grid-template-columns: repeat(2, 1fr);
@@ -9,6 +10,7 @@
 		display: flex;
 		align-items: center;
 		text-decoration: none;
+		transition: height 200ms;
 
 		&--art {
 			background: $color-art;

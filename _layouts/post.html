@@ -5,7 +5,9 @@ layout: default
 <article class="post post--full post--{{ page.categories[0] }}">
 	{% if page.image %}
 		<div class="post__image">
-			<img src="/assets/images/posts{{ page.permalink }}{{ page.image }}" alt="">
+			<a href="/assets/images/posts{{ page.permalink }}{{ page.image }}">
+				<img src="/assets/images/posts{{ page.permalink }}{{ page.image }}" alt="">
+			</a>
 		</div>
 	{% endif %}
 	<header id="page-title" class="page-title">
