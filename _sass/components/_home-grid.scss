@@ -4,13 +4,13 @@
 	grid-gap: $spacing;
 	grid-template-columns: repeat(2, 1fr);
 	padding: $spacing 0;
+	transition: height 200ms;
 
 	&__item {
 		position: relative;
 		display: flex;
 		align-items: center;
 		text-decoration: none;
-		transition: height 200ms;
 
 		&--art {
 			background: $color-art;
