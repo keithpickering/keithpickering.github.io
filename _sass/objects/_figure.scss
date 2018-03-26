@@ -1,0 +1,54 @@
+.figure {
+	margin-bottom: $spacing;
+	padding: $spacing-sm;
+	//border: 1px solid material-color('blue-grey', '100');
+	@include box-shadow(1);
+
+	&__img {
+		display: block;
+		margin-bottom: $spacing-sm;
+		width: 100%;
+
+		> img {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	&__caption {
+		text-align: center;
+		font-size: $zeta;
+
+		@include mq($from: tablet) {
+			font-size: $epsilon;
+		}
+	}
+
+	&--left,
+	&--right {
+		max-width: 200px;
+		@include mq($from: tablet) {
+			max-width: 320px;
+		}
+	}
+
+	&--left {
+		float: left;
+		margin-right: $spacing;
+		margin-left: -$spacing;
+
+		@include mq($from: desktop) {
+			margin-left: -$spacing*3;
+		}
+	}
+
+	&--right {
+		float: right;
+		margin-left: $spacing;
+		margin-right: -$spacing;
+		
+		@include mq($from: desktop) {
+			margin-right: -$spacing*3;
+		}
+	}
+}
