@@ -3,6 +3,9 @@
 	padding: $spacing-sm;
 	//border: 1px solid material-color('blue-grey', '100');
 	@include box-shadow(1);
+	@include mq($from: tablet) {
+		//margin-bottom: $spacing-lg;
+	}
 
 	&__img {
 		display: block;
@@ -40,6 +43,7 @@
 
 		@include mq($from: desktop) {
 			margin-left: -$spacing*3;
+			margin-right: $spacing-lg;
 		}
 	}
 
@@ -50,6 +54,7 @@
 		
 		@include mq($from: desktop) {
 			margin-right: -$spacing*3;
+			margin-left: $spacing-lg;
 		}
 	}
 }

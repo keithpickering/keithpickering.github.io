@@ -46,6 +46,7 @@
 
 	&__content {
 		padding: $spacing;
+		text-align: justify;
 	}
 
 	&--excerpt {
@@ -58,9 +59,10 @@
 
 	&--full {
 		.post--full__excerpt {
-			margin-bottom: $spacing-lg;
+			margin-bottom: $spacing-xl;
 			font-size: $delta;
 			font-style: italic;
+			text-align: center;
 			color: material-color('blue-grey', '200');
 		}
 
