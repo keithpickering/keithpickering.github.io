@@ -236,6 +236,11 @@ var Post = {
 				post.stickPostTitle();
 			});
 		}
+
+		// Lightbox setup
+		baguetteBox.run(".post--full", {
+			overlayBackgroundColor: "rgba(38,50,56,0.8)"
+		});
 	}
 };
 
