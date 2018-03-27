@@ -35,7 +35,16 @@ var Page = {
 		taglineElem: document.getElementById("page-head-tagline"),
 		pageTitleElem: document.getElementById("page-title"),
 		gridElem: document.getElementById("home-grid"),
-		headerElem: document.getElementById("page-head")
+		headerElem: document.getElementById("page-head"),
+		keith: document.getElementById("keith"),
+		images: []
+	},
+
+	preloadImages: function() {
+		for (var i = 0; i < arguments.length; i++) {
+			this.settings.images[i] = new Image();
+			this.settings.images[i].src = this.preloadImages.arguments[i];
+		}
 	},
 
 	getTagline: function() {
@@ -76,6 +85,41 @@ var Page = {
 			window.addEventListener("resize", function() {
 				page.sizeGrid();
 			});
+
+			// Keith image
+			var keith = page.settings.keith;
+			var gridItems = document.getElementsByClassName("home-grid__item");
+			var removeClasses = function() {
+				keith.classList.remove("keith--art");
+				keith.classList.remove("keith--code");
+				keith.classList.remove("keith--music");
+				keith.classList.remove("keith--hireme");
+			}
+
+			for (i = 0; i < gridItems.length; i++) {
+				gridItems[i].addEventListener("mouseenter", function(e) {
+					keith.classList.add("keith--animating");
+
+					setTimeout(function() {
+						if (e.target.classList.contains("home-grid__item--music")) {
+							keith.classList.add("keith--music");
+						} else if (e.target.classList.contains("home-grid__item--code")) {
+							keith.classList.add("keith--code");
+						} else if (e.target.classList.contains("home-grid__item--art")) {
+							keith.classList.add("keith--art");
+						} else if (e.target.classList.contains("home-grid__item--hireme")) {
+							keith.classList.add("keith--hireme");
+						}
+					}, 0);
+
+					setTimeout(function() {
+						keith.classList.remove("keith--animating");
+					}, 200);
+				});
+				gridItems[i].addEventListener("mouseleave", function() {
+					removeClasses();
+				});
+			}
 		}
 
 		// Remove preload class to enable transitions

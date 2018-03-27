@@ -28,6 +28,14 @@ body {
 	transition: none !important;
 }
 
+.preload-images {
+	background: url("/assets/images/keith-default.svg") no-repeat -9999px -9999px,
+	            url("/assets/images/keith-code.svg") no-repeat -9999px -9999px,
+	            url("/assets/images/keith-art.svg") no-repeat -9999px -9999px,
+	            url("/assets/images/keith-music.svg") no-repeat -9999px -9999px,
+	            url("/assets/images/keith-hireme.svg") no-repeat -9999px -9999px;
+}
+
 p {
 	margin-bottom: $spacing;
 
