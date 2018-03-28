@@ -96,6 +96,9 @@ var Page = {
 				keith.classList.remove("keith--hireme");
 			}
 
+			keith.classList.add("keith--music","keith--code","keith--art","keith--hireme");
+			setTimeout(function() { removeClasses(); }, 1);
+
 			for (i = 0; i < gridItems.length; i++) {
 				gridItems[i].addEventListener("mouseenter", function(e) {
 					keith.classList.add("keith--animating");
@@ -110,7 +113,7 @@ var Page = {
 						} else if (e.target.classList.contains("home-grid__item--hireme")) {
 							keith.classList.add("keith--hireme");
 						}
-					}, 0);
+					}, 20);
 
 					setTimeout(function() {
 						keith.classList.remove("keith--animating");
