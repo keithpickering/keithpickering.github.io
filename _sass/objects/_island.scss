@@ -1,0 +1,11 @@
+.island {
+	padding: $spacing;
+
+	&--lg {
+		padding: $spacing-lg;
+	}
+
+	&--xl {
+		padding: $spacing-xl;
+	}
+}

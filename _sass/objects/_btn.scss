@@ -1,8 +1,8 @@
 .btn {
 	display: inline-block;
 	height: $spacing-lg;
+	padding: 0 $spacing-sm;
 	line-height: $spacing-lg;
-	padding: $spacing-sm/2 $spacing-sm;
 	font-family: $heading-font-light;
 	text-transform: uppercase;
 	border: 0;
@@ -10,8 +10,31 @@
 	color: white;
 	cursor: pointer;
 	background: transparent;
+	transition: box-shadow 200ms, background 200ms;
+
+	&--lg {
+		line-height: $spacing-xl;
+		height: $spacing-xl;
+		padding: 0 $spacing;
+	}
+
+	&--raised {
+		//@include box-shadow(1);
+
+		&:hover {
+			@include box-shadow(1);
+		}
+	}
 
 	&--default {
 		background: material-color('blue', '400');
+
+		&:hover {
+			background: material-color('blue', '400');
+		}
+	}
+
+	&--search {
+		padding: $spacing-sm/2 $spacing-sm;
 	}
 }

@@ -1,12 +1,12 @@
 @keyframes keithBounce {
 	0% {
-		transform: translate(-50%, -50%) scaleY(0.95);
+		transform: scaleY(0.9);
 	}
 	50% {
-		transform: translate(-50%, -50%) scaleY(1.05);
+		transform: scaleY(1.02);
 	}
 	100% {
-		transform: translate(-50%, -50%);
+		transform: none;
 	}
 }
 
@@ -16,30 +16,41 @@
 	left: 50%;
 	transform: translate(-50%, -50%); 
 	height: 30vh;
-	width: 100%;
-	background-image: url(/assets/images/keith-default.svg);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center center;
+	width: 30vh;
 	pointer-events: none;
-	transform-origin: bottom center;
-	transition: transform 200ms;
+	
+	> div {
+		height: 100%;
+		width: 100%;
+		background-image: url(/assets/images/keith-default.svg);
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		background-position: center center;
+		transform-origin: bottom center;
+		transition: transform 200ms;
+		will-change: transform;
+	}
 
 	@include mq($from: tablet) {
 		height: 50vh;
+		width: 50vh;
 	}
 
 	&--music {
-		background-image: url(/assets/images/keith-music.svg);
-		background-position-x: calc(50% + 14px);
+		> div {
+			background-image: url(/assets/images/keith-music.svg);
+			background-position-x: calc(50% + 2.2vh);
 
-		@include mq($from: tablet) {
-			background-position-x: calc(50% + 24px);
+			@include mq($from: tablet) {
+				background-position-x: calc(50% + 3.7vh);
+			}
 		}
 	}
 
 	&--animating {
-		animation: keithBounce 200ms;
-		animation-fill-mode: forwards;
+		> div {
+			animation: keithBounce 200ms;
+			animation-fill-mode: forwards;
+		}
 	}
 }
