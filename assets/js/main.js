@@ -116,7 +116,7 @@ var Page = {
 
 						setTimeout(function() {
 							addClass(e.target.classList);
-						}, 60);
+						}, 50);
 
 						setTimeout(function() {
 							keith.classList.remove("keith--animating");
