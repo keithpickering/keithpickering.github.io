@@ -99,25 +99,30 @@ var Page = {
 			keith.classList.add("keith--music","keith--code","keith--art","keith--hireme");
 			setTimeout(function() { removeClasses(); }, 1);
 
+			var animating = false;
 			for (i = 0; i < gridItems.length; i++) {
 				gridItems[i].addEventListener("mouseenter", function(e) {
-					keith.classList.add("keith--animating");
+					if (!animating) {
+						animating = true;
+						keith.classList.add("keith--animating");
 
-					setTimeout(function() {
-						if (e.target.classList.contains("home-grid__item--music")) {
-							keith.classList.add("keith--music");
-						} else if (e.target.classList.contains("home-grid__item--code")) {
-							keith.classList.add("keith--code");
-						} else if (e.target.classList.contains("home-grid__item--art")) {
-							keith.classList.add("keith--art");
-						} else if (e.target.classList.contains("home-grid__item--hireme")) {
-							keith.classList.add("keith--hireme");
-						}
-					}, 20);
+						setTimeout(function() {
+							if (e.target.classList.contains("home-grid__item--music")) {
+								keith.classList.add("keith--music");
+							} else if (e.target.classList.contains("home-grid__item--code")) {
+								keith.classList.add("keith--code");
+							} else if (e.target.classList.contains("home-grid__item--art")) {
+								keith.classList.add("keith--art");
+							} else if (e.target.classList.contains("home-grid__item--hireme")) {
+								keith.classList.add("keith--hireme");
+							}
+						}, 20);
 
-					setTimeout(function() {
-						keith.classList.remove("keith--animating");
-					}, 200);
+						setTimeout(function() {
+							keith.classList.remove("keith--animating");
+							animating = false;
+						}, 200);
+					}
 				});
 				gridItems[i].addEventListener("mouseleave", function() {
 					removeClasses();
