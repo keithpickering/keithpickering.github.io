@@ -75,6 +75,10 @@
 				&.envelope:hover {
 					background-color: material-color('green', '400');
 				}
+
+				&.codepen:hover {
+					background-color: $color-codepen;
+				}
 			}
 		}
 	}
