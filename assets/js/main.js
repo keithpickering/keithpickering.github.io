@@ -104,9 +104,6 @@ var Page = {
 				}
 			}
 
-			//keith.classList.add("keith--music");
-			//setTimeout(function() { keith.classList.remove("keith--music"); }, 1);
-
 			var animating = false;
 			for (i = 0; i < gridItems.length; i++) {
 				gridItems[i].addEventListener("mouseenter", function(e) {
@@ -263,7 +260,7 @@ var Post = {
 		var pageTitleElem = this.settings.pageTitleElem;
 		var h = postImageElem.offsetHeight - (window.innerHeight - getElementPosition(postImageElem).top) + pageTitleElem.offsetHeight;
 
-		if (window.scrollY >= h) {
+		if (window.scrollY > h) {
 			pageTitleElem.style.position = "static";
 		} else {
 			pageTitleElem.style.position = "fixed";
