@@ -104,8 +104,8 @@ var Page = {
 				}
 			}
 
-			keith.classList.add("keith--music","keith--code","keith--art","keith--hireme");
-			setTimeout(function() { removeClasses(); }, 1);
+			//keith.classList.add("keith--music");
+			//setTimeout(function() { keith.classList.remove("keith--music"); }, 1);
 
 			var animating = false;
 			for (i = 0; i < gridItems.length; i++) {

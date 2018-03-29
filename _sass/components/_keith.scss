@@ -14,7 +14,7 @@
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%); 
+	transform: translate(calc( -50% + 10px ), -50%); 
 	height: 30vh;
 	width: 30vh;
 	pointer-events: none;
@@ -31,7 +31,7 @@
 		background-image: url(/assets/images/keith-default.svg);
 		background-repeat: no-repeat;
 		background-size: auto 100%;
-		background-position: center center;
+		background-position: bottom center;
 		transform-origin: bottom center;
 		transition: transform 200ms;
 		will-change: transform;
@@ -45,11 +45,19 @@
 	&--music {
 		> div {
 			background-image: url(/assets/images/keith-music.svg);
-			background-position-x: calc(50% + 2.2vh);
+		}
+	}
 
-			@include mq($from: tablet) {
-				background-position-x: calc(50% + 3.7vh);
-			}
+	&--art {
+		> div {
+			background-image: url(/assets/images/keith-art.svg);
+			background-size: auto 95.5%;
+		}
+	}
+
+	&--hireme {
+		> div {
+			background-image: url(/assets/images/keith-hireme.svg);
 		}
 	}
 
