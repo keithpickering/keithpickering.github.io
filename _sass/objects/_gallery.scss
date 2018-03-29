@@ -1,0 +1,20 @@
+.gallery {
+	padding: $spacing;
+	padding-right: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	> .figure {
+		margin-right: $spacing;
+		width: calc(50% - #{$spacing});
+
+		@include mq($from: desktop) {
+			width: calc(33.33% - #{$spacing});
+		}
+
+		@include mq($from: wide) {
+			width: calc(25% - #{$spacing});
+		}
+	}
+}

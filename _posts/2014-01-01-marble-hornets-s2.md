@@ -11,7 +11,7 @@ image: "main.jpg"
 	Official DVD cover for a popular YouTube horror series
 </p>
 
-{% include figure.html img="super-mario-stonedshine/main.png" caption="This is a caption" float="left" %}
+{% include figure.html img="marble-hornets-s2/01.jpg" caption="This is a caption" float="left" %}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim mollis ipsum a venenatis. Nulla vitae leo id elit commodo venenatis at quis dui. Nam orci arcu, ornare id justo et, volutpat fringilla magna. Ut congue, libero eu elementum malesuada, turpis quam fringilla risus, eget semper lectus elit sit amet nibh. Duis in nunc quis diam fringilla dapibus id id turpis. Aliquam aliquet libero magna, nec suscipit libero accumsan vitae. Fusce et ipsum fringilla, facilisis nisi nec, rutrum arcu. Aliquam turpis orci, egestas id rutrum sit amet, egestas non purus. Aenean fringilla tortor quis leo rutrum imperdiet. Quisque rhoncus euismod lectus, id ultrices est euismod sed. Pellentesque fermentum, ex in rhoncus molestie, libero eros gravida lorem, tristique molestie neque velit eu sapien. Sed tortor nisl, pulvinar vitae condimentum ac, porta vel nisl. Ut eu nisi sagittis, maximus turpis et, semper elit. Cras sed turpis eu velit porttitor tincidunt eu sit amet libero. Sed cursus tristique ornare. Maecenas maximus lacus sed auctor consequat.
 
@@ -23,6 +23,6 @@ Ut ut vulputate est. Aenean eleifend sapien lorem, in condimentum neque pharetra
 Sed felis nisl, sodales vitae faucibus id, iaculis quis nulla. In imperdiet ligula vitae nisl aliquam pharetra. Etiam varius nunc vitae leo egestas luctus. Suspendisse fermentum mollis pellentesque. Morbi auctor ac urna a mattis. In euismod, risus ut consequat malesuada, lacus nibh porttitor nulla, nec tristique nisi urna eget leo. Morbi sit amet arcu ut est sodales vehicula a sit amet sem. Proin et mi id odio ornare aliquam at at odio. Donec pharetra leo ligula, quis viverra tortor imperdiet a. Sed gravida tellus id tellus auctor, eu volutpat erat tempus. Vestibulum dignissim ac lorem ac dictum. Duis augue eros, molestie non ante eu, viverra consequat risus. Integer iaculis rutrum blandit. Vivamus lectus eros, imperdiet a dignissim nec, finibus ac velit. Pellentesque suscipit libero mauris.
 
 
-{% include figure.html img="super-mario-stonedshine/main.png" caption="This is a caption" float="right" %}
+{% include figure.html img="marble-hornets-s2/02.jpg" caption="This is a caption" float="right" %}
 
 Etiam accumsan tortor sit amet dolor maximus, ac fringilla magna feugiat. Nunc nulla turpis, vulputate vitae feugiat id, viverra euismod lacus. Maecenas justo augue, volutpat in sodales at, luctus eget elit. Integer nec orci nec metus feugiat rhoncus nec a erat. Vestibulum iaculis fringilla leo nec varius. Praesent quis bibendum ex. Etiam pharetra tellus a eros consectetur elementum. In sollicitudin elit purus, ut congue dolor porttitor vel. In lacinia iaculis libero, sit amet egestas augue hendrerit at. Donec mi justo, pellentesque ac risus et, aliquet fringilla diam. Nunc sit amet suscipit eros. In pulvinar et nibh at ullamcorper. Quisque ut congue enim. Vivamus in velit nulla. Mauris faucibus vehicula diam at cursus. Donec condimentum, urna ac vestibulum tristique, felis metus pretium nibh, quis euismod ligula dolor ut ante.

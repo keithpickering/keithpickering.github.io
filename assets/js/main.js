@@ -199,12 +199,13 @@ var sjs,
 		  searchInput: searchInputElem,
 		  resultsContainer: searchResultsElem,
 		  json: '/search.json',
-		  searchResultTemplate: '<a href="{url}" class="media media--middle">'+
+		  searchResultTemplate: '<a href="{url}" class="media media--middle {category}">'+
 									'<div class="media__img">'+
 										'<img src="/assets/images/posts{permalink}{image}" alt="">'+
 									'</div>'+
 									'<div class="media__body">'+
 										'{title}'+
+										'<div class="search-type search-type--{category}"></div>'+
 									'</div>'+
 								'</a>',
           noResultsText: '<li class="page-search__noresults">No results found</li>',
