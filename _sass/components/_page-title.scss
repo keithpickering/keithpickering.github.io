@@ -8,7 +8,6 @@
 	color: white;
 
 	.post & {
-		position: fixed;
 		bottom: 0;
 		left: 0;
 		right: 0;
@@ -39,6 +38,41 @@
 
 		@include mq($from: desktop) {
 			font-size: $alpha;
+		}
+	}
+
+	@keyframes arrowPoint {
+		0% {
+			opacity: 0;
+			transform: translate(0, -100%);
+		}
+		50% {
+			opacity: 1;
+		}
+		100% {
+			transform: none;
+		}
+	}
+
+	&__skip {
+		position: absolute;
+		left: 50%;
+		top: -$alpha*1.25;
+		font-size: $gamma;
+		background: transparent;
+		border: 0;
+		outline: 0;
+		color: rgba(material-color('blue-grey', '100'), 0.75);
+		//cursor: pointer;
+		width: $alpha;
+		height: $alpha;
+		margin-left: -$alpha/2;
+		line-height: $alpha;
+		border-radius: 50%;
+		animation: arrowPoint 1s 3 forwards ease-out;
+
+		&:hover {
+			//background: rgba(material-color('blue-grey', '100'), 0.15);
 		}
 	}
 }

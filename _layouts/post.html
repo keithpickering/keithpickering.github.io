@@ -3,10 +3,10 @@ layout: default
 ---
 
 <article class="post post--full post--{{ page.categories[0] }}">
-	{% if page.image %}
+	{% if page.image and page.categories[0] != "music" %}
 		<div class="post__image">
 			<a href="/assets/images/posts{{ page.permalink }}{{ page.image }}">
-				<img src="/assets/images/posts{{ page.permalink }}{{ page.image }}" alt="">
+				<img src="/assets/images/posts{{ page.permalink }}large/{{ page.image }}" alt="">
 			</a>
 		</div>
 	{% endif %}
@@ -14,6 +14,9 @@ layout: default
 		<div class="wrapper wrapper--padded">
 			<h1>{{ page.title }}</h1>
 		</div>
+		<button id="page-title-skip" class="page-title__skip" type="button">
+			<i class="fa-fw fas fa-chevron-down"></i>
+		</button>
 	</header>
 	<section class="post__content">
 		<div class="wrapper wrapper--padded">

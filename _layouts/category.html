@@ -14,23 +14,47 @@ layout: page
 			<p class="no-posts">No posts yet in this category.</p>
 		{% else %}
 			{% for post in site.categories[page.category] %}
-				<article class="post post--excerpt post--{{ post.categories[0] }}">
-					{% if post.image %}
-						<a href="{{ post.url | absolute_url }}" class="post__image post--excerpt__image">
-							<img src="/assets/images/posts/{{ post.permalink }}medium/{{ post.image }}" alt="">
-						</a>
-					{% endif %}
-				    <header class="post__header">
-				    	<h2 class="post__header__title">
-				    		<a href="{{ post.url | absolute_url }}">
-					    		{{ post.title }}
-					    	</a>
-					    </h2>
-				    </header>
-				    <section class="post__content">
-				    	{{ post.excerpt }}
-				    </section>
-				</article>
+				{% if post.categories[0] == "music" %}
+					<article class="post post--excerpt post--{{ post.categories[0] }}">
+						<div class="media media--fixed">
+							{% if post.image %}
+								<a class="media__img" href="{{ post.url | absolute_url }}" class="post__image post--excerpt__image">
+									<img src="/assets/images/posts/{{ post.permalink }}square/{{ post.image }}" alt="">
+								</a>
+							{% endif %}
+							<div class="media__body">
+							    <header class="post__header">
+							    	<h2 class="post__header__title">
+							    		<a href="{{ post.url | absolute_url }}">
+								    		{{ post.title }}
+								    	</a>
+								    </h2>
+							    </header>
+							    <section class="post__content">
+							    	{{ post.excerpt }}
+							    </section>
+							</div>
+						</div>
+					</article>
+				{% else %}
+					<article class="post post--excerpt post--{{ post.categories[0] }}">
+						{% if post.image %}
+							<a href="{{ post.url | absolute_url }}" class="post__image post--excerpt__image">
+								<img src="/assets/images/posts/{{ post.permalink }}medium/{{ post.image }}" alt="">
+							</a>
+						{% endif %}
+					    <header class="post__header">
+					    	<h2 class="post__header__title">
+					    		<a href="{{ post.url | absolute_url }}">
+						    		{{ post.title }}
+						    	</a>
+						    </h2>
+					    </header>
+					    <section class="post__content">
+					    	{{ post.excerpt }}
+					    </section>
+					</article>
+				{% endif %}
 			{% endfor %}
 		{% endif %}
 	</div>

@@ -13,7 +13,7 @@
 		height: 0;
 	}
 	100% {
-		height: 72px;
+		height: 75px;
 	}
 }
 
@@ -70,14 +70,20 @@
 			max-width: 320px;
 		}
 
-		> li {
+		> .media {
 			height: 0;
-			overflow: hidden;
 			animation: searchResultOpen 200ms;
 			animation-fill-mode: forwards;
 
 			> .media__img {
-				width: $spacing*3;
+				width: 75px;
+				transition: box-shadow 200ms;
+			}
+
+			&:hover {
+				> .media__img {
+					@include box-shadow(1);
+				}
 			}
 
 			&:last-child {
@@ -88,6 +94,6 @@
 
 	&__noresults {
 		//max-height: $spacing;
-		padding-top: $spacing;
+		margin-bottom: $spacing;
 	}
 }

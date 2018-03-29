@@ -202,12 +202,14 @@ var sjs,
 		  searchInput: searchInputElem,
 		  resultsContainer: searchResultsElem,
 		  json: '/search.json',
-		  searchResultTemplate: '<li class="media media--middle">'+
-									'<img class="media__img" src="/assets/images/posts{permalink}{image}" alt="">'+
-									'<div class="media__body">'+
-										'<a href="{url}" title="{desc}">{title}</a>'+
+		  searchResultTemplate: '<a href="{url}" class="media media--middle">'+
+									'<div class="media__img">'+
+										'<img src="/assets/images/posts{permalink}{image}" alt="">'+
 									'</div>'+
-								'</li>',
+									'<div class="media__body">'+
+										'{title}'+
+									'</div>'+
+								'</a>',
           noResultsText: '<li class="page-search__noresults">No results found</li>',
           fuzzy: true
 		});
@@ -256,7 +258,7 @@ var Post = {
 		}
 	},
 
-	stickPostTitle: function(postImageElem, pageTitleElem) {
+	stickPostTitle: function() {
 		var postImageElem = this.settings.postImageElem;
 		var pageTitleElem = this.settings.pageTitleElem;
 		var h = postImageElem.offsetHeight - (window.innerHeight - getElementPosition(postImageElem).top) + pageTitleElem.offsetHeight;
@@ -270,17 +272,18 @@ var Post = {
 
 	init: function() {
 		var post = this;
-		var postTitleElem = post.settings.postTitleElem;
+		var postTitleElem = post.settings.pageTitleElem;
 		var postImageElem = post.settings.postImageElem;
 		var postContentElem = post.settings.postContentElem;
 		var headerElem = post.settings.headerElem;
 
 		if (postImageElem) {
-			postImageElem.setAttribute('data-natural-height', postImageElem.offsetHeight);
-			post.sizePostImage();
+			postTitleElem.style.position = "fixed";
+			//postImageElem.setAttribute('data-natural-height', postImageElem.offsetHeight);
+			//post.sizePostImage();
 			window.addEventListener("resize", function() {
 				postImageElem.style.height = null;
-				postImageElem.setAttribute('data-natural-height', postImageElem.offsetHeight);
+				//postImageElem.setAttribute('data-natural-height', postImageElem.offsetHeight);
 				post.sizePostImage();
 				post.stickPostTitle();
 			});

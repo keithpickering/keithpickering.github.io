@@ -18,6 +18,12 @@
 	height: 30vh;
 	width: 30vh;
 	pointer-events: none;
+	opacity: 1;
+	transition: opacity 500ms;
+
+	.preload & {
+		opacity: 0;
+	}
 	
 	> div {
 		height: 100%;

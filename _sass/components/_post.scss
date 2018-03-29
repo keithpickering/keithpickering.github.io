@@ -1,10 +1,22 @@
 .posts {
 	margin-bottom: $spacing-xl;
 
-	&--art {
+	& {
 		display: grid;
 		grid-gap: $spacing;
-		grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+		grid-template-columns: repeat(auto-fill, minmax(100px,1fr));
+
+		@include mq($from: tablet) {
+			grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+		}
+	}
+
+	.page--music & {
+		grid-template-columns: repeat(auto-fill, minmax(100%,1fr));
+
+		@include mq($from: tablet) {
+			grid-template-columns: repeat(auto-fill, minmax(500px,1fr));
+		}
 	}
 }
 
@@ -46,7 +58,7 @@
 
 	&__content {
 		padding: $spacing;
-		text-align: justify;
+		padding-top: $spacing-sm;
 	}
 
 	&--excerpt {
@@ -54,6 +66,53 @@
 
 		&__image {
 			border-bottom: 1px solid material-color('blue-grey', '100');
+		}
+
+		.post__header {
+			padding: $spacing-sm;
+			padding-bottom: 0;
+
+			@include mq($from: tablet) {
+				padding-top: $spacing;
+				padding-right: $spacing;
+				padding-left: $spacing;
+			}
+
+			&__title {
+				font-size: $epsilon;
+				line-height: $spacing-sm+$spacing-sm/2;
+
+				@include mq($from: tablet) {
+					font-size: $delta;
+					line-height: $spacing;
+				}
+			}
+		}
+
+		.post__content {
+			padding: $spacing-sm;
+			font-size: $zeta;
+			line-height: $spacing-sm+$spacing-sm/2;
+
+			@include mq($from: tablet) {
+				padding: $spacing;
+				padding-top: $spacing-sm;
+				font-size: $epsilon;
+				line-height: $spacing;
+			}
+		}
+
+		&.post--music {
+			height: 150px;
+
+			@include mq($from: tablet) {
+				height: 150px;
+			}
+
+			.post__content,
+			.post__header {
+				padding-left: 0;
+			}
 		}
 	}
 
@@ -69,6 +128,7 @@
 		.post__content {
 			padding-top: $spacing-xl;
 			padding-bottom: $spacing-xl;
+			text-align: justify;
 		}
 	}
 }
