@@ -1,6 +1,6 @@
 {% assign image = include.img | split: "/" %}
 <figure class="figure {% if include.float %}figure--{{ include.float }}{% endif %}">
-	<a href="/assets/images/posts/{{ image[0] }}/{{ image[1] }}" class="figure__img">
+	<a href="/assets/images/posts/{{ image[0] }}/large/{{ image[1] }}" class="figure__img">
 		<img src="/assets/images/posts/{{ image[0] }}/medium/{{ image[1] }}" alt="">
 	</a>
 	<figcaption class="figure__caption">{{ include.caption }}</figcaption>

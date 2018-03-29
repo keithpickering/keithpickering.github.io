@@ -3,6 +3,7 @@ layout: post
 title:  "Minus World"
 categories: code
 permalink: /minus-world/
+exturl: "https://minus.world"
 image: "main.png"
 ---
 

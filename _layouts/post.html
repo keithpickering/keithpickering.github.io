@@ -5,9 +5,13 @@ layout: default
 <article class="post post--full post--{{ page.categories[0] }}">
 	{% if page.image and page.categories[0] != "music" %}
 		<div class="post__image">
-			<a href="/assets/images/posts{{ page.permalink }}{{ page.image }}">
-				<img src="/assets/images/posts{{ page.permalink }}large/{{ page.image }}" alt="">
-			</a>
+			{% if page.exturl %}
+				<a href="{{ page.exturl }}">
+			{% else %}
+				<a href="/assets/images/posts{{ page.permalink }}large/{{ page.image }}">
+			{% endif %}
+					<img src="/assets/images/posts{{ page.permalink }}large/{{ page.image }}" alt="">
+				</a>
 		</div>
 	{% endif %}
 	<header id="page-title" class="page-title">
