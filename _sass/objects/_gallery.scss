@@ -7,7 +7,11 @@
 
 	> .figure {
 		margin-right: $spacing;
-		width: calc(50% - #{$spacing});
+		width: calc(100% - #{$spacing});
+
+		@include mq($from: tablet) {
+			width: calc(50% - #{$spacing});
+		}
 
 		@include mq($from: desktop) {
 			width: calc(33.33% - #{$spacing});
