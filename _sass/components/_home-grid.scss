@@ -1,3 +1,12 @@
+@keyframes scrollBg {
+	0% {
+		transform: translate(0);
+	}
+	100% {
+		transform: translate(-10vw);
+	}
+}
+
 .home-grid {
 	position: relative;
 	display: grid;
@@ -12,12 +21,77 @@
 		}
 	}
 
+	&__bg {
+		display: none;
+
+		@include mq($from: desktop) {
+			display: flex;
+			flex-wrap: wrap;
+		    position: absolute;
+	    	top: -5%;
+	    	left: 0;
+	    	width: 150%;
+	    	height: 110%;
+	    	opacity: 0;
+
+	    	.home-grid__item--art & {
+	    		color: material-color('blue', '300');
+	    	}
+
+	    	.home-grid__item--code & {
+	    		color: material-color('orange', '300');
+
+	    		> i {
+	    			transform: rotate(25deg) translate(20%);
+	    		}
+	    	}
+
+	    	.home-grid__item--music & {
+	    		color: darken(material-color('purple', '200'),5%);
+
+	    		> i {
+	    		}
+	    	}
+
+	    	.home-grid__item--hireme & {
+	    		color: material-color('green', '300');
+
+	    		> i {
+	    			font-size: 13vmin;
+	    			transform: rotate(45deg) translateY(30%);
+	    		}
+	    	}
+
+
+	    	.home-grid__item:hover & {
+	    		animation: scrollBg 5s linear infinite;
+	    		opacity: 1;
+	    		transition: opacity 200ms;
+	    	}
+
+	    	> i {
+	    		width: 10vw;
+	    		height: 36.66%;
+	    		line-height: 1;
+	    		flex-shrink: 0;
+	    		flex-grow: 0;
+	    		font-size: 12vmin;
+	    		//transform: rotate(-35deg);
+	    	}
+	    }
+	}
+
 	&__item {
+	overflow: hidden;
 		position: relative;
 		display: flex;
 		align-items: center;
 		text-decoration: none;
 		transition: opacity 200ms;
+
+		font-family: "Font Awesome 5 Free";
+		font-weight: 900;
+		background-image: content("\f1fc");
 
 		&:hover {
 			opacity: 1 !important;
@@ -44,6 +118,8 @@
 			font-family: $heading-font-light;
 			font-size: 7vw;
 			color: white;
+			position: relative;
+			z-index: 1;
 		}
 	}
 }
