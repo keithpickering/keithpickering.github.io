@@ -3,7 +3,7 @@
 		transform: translate(0);
 	}
 	100% {
-		transform: translate(-10vw);
+		transform: translate(-25%);
 	}
 }
 
@@ -28,10 +28,10 @@
 			display: flex;
 			flex-wrap: wrap;
 		    position: absolute;
-	    	top: -5%;
+	    	top: -25%;
 	    	left: 0;
 	    	width: 150%;
-	    	height: 110%;
+	    	height: 150%;
 	    	opacity: 0;
 
 	    	.home-grid__item--art & {
@@ -40,25 +40,17 @@
 
 	    	.home-grid__item--code & {
 	    		color: material-color('orange', '300');
-
-	    		> i {
-	    			transform: rotate(25deg) translate(20%);
-	    		}
 	    	}
 
 	    	.home-grid__item--music & {
 	    		color: darken(material-color('purple', '200'),5%);
-
-	    		> i {
-	    		}
 	    	}
 
 	    	.home-grid__item--hireme & {
 	    		color: material-color('green', '300');
 
 	    		> i {
-	    			font-size: 13vmin;
-	    			transform: rotate(45deg) translateY(30%);
+	    			transform: rotate(45deg) translateY(45%);
 	    		}
 	    	}
 
@@ -70,19 +62,21 @@
 	    	}
 
 	    	> i {
-	    		width: 10vw;
-	    		height: 36.66%;
+	    		width: 25%;
+	    		height: 50%;
 	    		line-height: 1;
 	    		flex-shrink: 0;
 	    		flex-grow: 0;
-	    		font-size: 12vmin;
+	    		font-size: 20vmin;
 	    		//transform: rotate(-35deg);
+	    		position: relative;
+	    		z-index: -1;
 	    	}
 	    }
 	}
 
 	&__item {
-	overflow: hidden;
+		overflow: hidden;
 		position: relative;
 		display: flex;
 		align-items: center;
@@ -93,8 +87,21 @@
 		font-weight: 900;
 		background-image: content("\f1fc");
 
+		&:after {
+			//content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			transition: box-shadow 200ms;
+		}
+
 		&:hover {
 			opacity: 1 !important;
+			&:after {
+				@include box-shadow(4, "inset");
+			}
 		}
 
 		&--art {

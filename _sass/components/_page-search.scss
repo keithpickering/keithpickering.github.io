@@ -24,19 +24,18 @@
 	width: 100%;
 	transition: transform 500ms,
 				box-shadow 500ms;
-	transform: translate(100%, 0);
+	transform: translate(0, -100%);
 	background: white;
-	border-right-width: 0;
-	border-top-width: 0;
 	z-index: 999;
+
+	@include mq($from: tablet) {
+		max-width: 320px;
+		transform: translate(100%, 0);
+	}
 
 	&--open {
 		transform: none;
 		@include box-shadow(3);
-	}
-
-	@include mq($from: tablet) {
-		max-width: 320px;
 	}
 
 	.text-input-btn {
@@ -85,26 +84,20 @@
 				padding-right: $spacing-lg;
 			}
 
-			&:hover {
-				> .media__img {
-					@include box-shadow(2);
-				}
-			}
-
 			&:last-child {
 				margin-bottom: $spacing;
 			}
 
 			&.art {
-				color: $color-art;
+				//color: $color-art;
 			}
 
 			&.code {
-				color: $color-code;
+				//color: $color-code;
 			}
 
 			&.music {
-				color: $color-music;
+				//color: $color-music;
 			}
 		}
 	}
