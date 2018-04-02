@@ -276,20 +276,17 @@ var Post = {
 		var headerElem = post.settings.headerElem;
 
 		if (postImageElem) {
-			postTitleElem.style.position = "fixed";
-			//postImageElem.setAttribute('data-natural-height', postImageElem.offsetHeight);
-			//post.sizePostImage();
-			window.addEventListener("resize", function() {
-				postImageElem.style.height = null;
-				//postImageElem.setAttribute('data-natural-height', postImageElem.offsetHeight);
-				post.sizePostImage();
+			postImageElem.children[0].children[0].addEventListener("load", function() {
 				post.stickPostTitle();
+				window.addEventListener("scroll", function() {
+					post.stickPostTitle();
+				});
+				window.addEventListener("resize", function() {
+					post.stickPostTitle();
+				});
 			});
-
-			post.stickPostTitle();
-			window.addEventListener("scroll", function() {
-				post.stickPostTitle();
-			});
+		} else {
+			console.log('no img loaded')
 		}
 
 		// Lightbox setup
