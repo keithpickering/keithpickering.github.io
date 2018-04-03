@@ -136,12 +136,12 @@ var Page = {
 		});
 
 		// Remove preloader
-		window.onload = function() {
+		window.addEventListener("load", function() {
 			preloader.classList.add("preloader--hidden");
 			setTimeout(function() {
 				preloader.style.display = "none";
 			}, 500);
-		}
+		});
 	}
 };
 
@@ -204,6 +204,8 @@ var sjs,
 		var searchInputElem = search.settings.searchInputElem;
 		var searchCloseElem = search.settings.searchCloseElem;
 
+		zenscroll.setup(null, 0);
+
 		sjs = SimpleJekyllSearch({
 		  searchInput: searchInputElem,
 		  resultsContainer: searchResultsElem,
@@ -254,7 +256,8 @@ var Post = {
 		pageTitleElem: document.getElementById("page-title"),
 		postImageElem: document.getElementsByClassName("post__image")[0],
 		postContentElem: document.getElementsByClassName("post__content")[0],
-		headerElem: document.getElementById("page-head")
+		headerElem: document.getElementById("page-head"),
+		skipElem: document.getElementById("page-title-skip")
 	},
 
 	sizePostImage: function() {
@@ -283,9 +286,10 @@ var Post = {
 		var postImageElem = post.settings.postImageElem;
 		var postContentElem = post.settings.postContentElem;
 		var headerElem = post.settings.headerElem;
+		var skipElem = post.settings.skipElem;
 
 		if (postImageElem) {
-			postImageElem.children[0].children[0].addEventListener("load", function() {
+			window.addEventListener("load", function() {
 				post.stickPostTitle();
 				window.addEventListener("scroll", function() {
 					post.stickPostTitle();
@@ -294,8 +298,11 @@ var Post = {
 					post.stickPostTitle();
 				});
 			});
-		} else {
-			console.log('no img loaded')
+
+			skipElem.addEventListener("click", function(e) {
+				e.preventDefault();
+				zenscroll.to(postContentElem);
+			});
 		}
 
 		// Lightbox setup
