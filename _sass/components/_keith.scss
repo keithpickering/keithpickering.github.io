@@ -61,6 +61,12 @@
 		}
 	}
 
+	&--code {
+		> div {
+			background-image: url(/assets/images/keith-code.svg);
+		}
+	}
+
 	&--animating {
 		> div {
 			animation: keithBounce 200ms;
