@@ -37,6 +37,7 @@ var Page = {
 		gridElem: document.getElementById("home-grid"),
 		headerElem: document.getElementById("page-head"),
 		keith: document.getElementById("keith"),
+		preloader: document.getElementById("preloader"),
 		images: []
 	},
 
@@ -133,6 +134,14 @@ var Page = {
 		document.addEventListener("DOMContentLoaded", function() {
 			document.body.classList.remove("preload");
 		});
+
+		// Remove preloader
+		window.onload = function() {
+			preloader.classList.add("preloader--hidden");
+			setTimeout(function() {
+				preloader.style.display = "none";
+			}, 500);
+		}
 	}
 };
 

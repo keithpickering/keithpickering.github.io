@@ -1,4 +1,6 @@
 .page-head {
+	position: relative;
+	z-index: 998;
 	padding: $spacing 0;
 	text-align: center;
 	background: material-color('blue-grey', '800');
