@@ -71,10 +71,13 @@
 		margin-left: -$alpha/2;
 		line-height: $alpha;
 		border-radius: 50%;
-		animation: arrowPoint 1s 3 forwards ease-out;
+		animation: arrowPoint 1s 2 forwards ease-out;
+		transition: all 100ms;
 
 		&:hover {
-			background: rgba(material-color('blue-grey', '400'), 0.5);
+			background: material-color('blue-grey', '500');
+			text-shadow: none;
+			@include box-shadow(2);
 		}
 	}
 }

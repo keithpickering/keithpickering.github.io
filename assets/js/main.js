@@ -55,7 +55,7 @@ var Page = {
 		}
 
 		var taglines = [
-			'Let&rsquo;s get it started', 'Just Do It', 'A quarter century of human experience', 'You&rsquo;re in my world now', 'Famous movie star in several parallel universes', 'Ha ha, what a story.', 'That&rsquo;s my name, don&rsquo;t wear it out', 'You may have seen me at the grocery store', 'A guy who does things', 'As seen on "Shark Tank"...OK, not really', 'Since 1842', 'It&rsquo;s Good', 'Has never eaten avocado toast', 'A jack of all trades is a master of...all trades', 'Puts his pants on two legs at a time', 'lmao xD', 'Tagline Writer Extraordinaire', 'You are tearing me apart!', 'As seen on the local news in like 4th grade', 'Sold as-is', 'Shirt size large, Heart size XXL', 'Voted &ldquo;Good Drawer&rdquo; in elementary school', 'For President 2068', 'Do you understand life? Do you?!', 'That&rsquo;s all there is to it', 'I&rsquo;m Lovin&rsquo; It', 'In the past you&rsquo;re always stupid, but right now you&rsquo;re awesome', 'Say what you will about armchair activists; at least we have good lumbar support.', 'How are my approval ratings?', 'Just how many of these things did I write?', 'Lifelong occupant of the darkest timeline', 'If I can&rsquo;t scuba, then what&rsquo;s this all been about?', 'I do what I do so I don&rsquo;t have to do what I don&rsquo;t do', 'Magic&rsquo;s in the air', 'No free refills', 'and the Chamber of Echoes', 'Won some kind of award once, I&rsquo;m pretty sure', 'Remarkably unremarkable', 'A product of 13 billion years of trial and error', 'Well, this is awkward', 'Drafter of Ones and Zeroes', 'Comes with a medium drink and a side of your choice', 'Nothing to it'
+			'Let&rsquo;s get it started', 'Just Do It', 'A quarter century of human experience', 'Famous movie star in several parallel universes', 'Ha ha, what a story.', 'You may have seen me at the grocery store', 'A guy who does things', 'As seen on "Shark Tank"...OK, not really', 'Since 1842', 'Has never eaten avocado toast', 'A jack of all trades is a master of...all trades', 'Puts his pants on two legs at a time', 'Tagline Writer Extraordinaire', 'You are tearing me apart!', 'As seen on the local news in like 4th grade', 'Sold as-is', 'Shirt size large, Heart size XXL', 'Voted &ldquo;Good Drawer&rdquo; in elementary school', 'For President 2068', 'Do you understand life? Do you?!', 'That&rsquo;s all there is to it', 'I&rsquo;m Lovin&rsquo; It', 'In the past you&rsquo;re always stupid, but right now you&rsquo;re awesome', 'Say what you will about armchair activists; at least we have good lumbar support.', 'Just how many of these things did I write?', 'Lifelong occupant of the darkest timeline', 'I do what I do so I don&rsquo;t have to do what I don&rsquo;t do', 'No free refills', 'and the Chamber of Echoes', 'Won some kind of award once, I&rsquo;m pretty sure', 'A product of 13 billion years of trial and error', 'Well, this is awkward', 'Comes with a medium drink and a side of your choice', 'Nothing to it'
 		];
 
 		var rand = taglines[Math.random() * taglines.length>>0];
@@ -76,6 +76,7 @@ var Page = {
 		var pageTitleElem = page.settings.pageTitleElem;
 		var headerElem = page.settings.headerElem;
 		var gridElem = page.settings.gridElem;
+		var preloader = page.settings.preloader;
 
 		var tagline = page.getTagline();
 		if (tagline.length) page.settings.taglineElem.innerHTML = tagline;
@@ -136,12 +137,21 @@ var Page = {
 		});
 
 		// Remove preloader
-		window.addEventListener("load", function() {
-			preloader.classList.add("preloader--hidden");
-			setTimeout(function() {
-				preloader.style.display = "none";
-			}, 500);
-		});
+		if (preloader) {
+			var timer = setTimeout(function() {
+				preloader.classList.add("preloader--hidden");
+				setTimeout(function() {
+					preloader.style.display = "none";
+				}, 500);
+			}, 3000);
+			window.addEventListener("load", function() {
+				clearTimeout(timer);
+				preloader.classList.add("preloader--hidden");
+				setTimeout(function() {
+					preloader.style.display = "none";
+				}, 500);
+			});
+		}
 	}
 };
 

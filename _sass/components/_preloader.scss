@@ -9,9 +9,9 @@
   font-size: 10px;
   position: relative;
   text-indent: -9999em;
-  border-top: 1.1em solid lighten(material-color('blue-grey', '100'),10%);
-  border-right: 1.1em solid lighten(material-color('blue-grey', '100'),10%);
-  border-bottom: 1.1em solid lighten(material-color('blue-grey', '100'),10%);
+  border-top: 1.1em solid material-color('blue-grey', '800');
+  border-right: 1.1em solid material-color('blue-grey', '800');
+  border-bottom: 1.1em solid material-color('blue-grey', '800');
   border-left: 1.1em solid material-color('blue', '200');
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -46,7 +46,7 @@
   right: 0;
   left: 0;
   height: 100vh;
-  background: white;
+  background: material-color('blue-grey', '900');
   transition: opacity 500ms;
   z-index: 997;
 

@@ -66,6 +66,13 @@
 
 		&__image {
 			border-bottom: 1px solid material-color('blue-grey', '100');
+			background: material-color('blue-grey', '100');
+			width: 100%;
+			padding-bottom: 75%;
+
+			> img {
+				margin-bottom: -75%;
+			}
 		}
 
 		.post__header {
