@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Creation of Snuckles"
-date:   2015-01-01
+date:   2013-01-01
 categories: art
 permalink: /creation-of-snuckles/
 image: "00.jpg"

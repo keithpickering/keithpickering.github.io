@@ -14,6 +14,8 @@ image: "main.jpg"
 <div class="gallery">
 {% include figure.html img="marble-hornets-s2/01.jpg" caption="Full outer cover" %}
 {% include figure.html img="marble-hornets-s2/02.jpg" caption="Inner cover (disc trays)" %}
+{% include figure.html img="marble-hornets-s2/04.jpg" caption="Photo of the final product" %}
+{% include figure.html img="marble-hornets-s2/05.jpg" caption="Photo of the final product (inner)" %}
 </div>
 
 Tools Used: Photoshop
