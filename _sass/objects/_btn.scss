@@ -26,7 +26,8 @@
 		}
 	}
 
-	&--default {
+	&--default,
+	&--art {
 		background: material-color('blue', '400');
 
 		&:hover {
@@ -34,14 +35,24 @@
 		}
 	}
 
-	&--hireme {
-		margin-top: $spacing;
-		background: $color-hireme;
+	&--music {
+		background: $color-music;
 
-		@include mq($from: tablet) {
-			margin-top: 0;
-			margin-left: $spacing-sm;
+		&:hover {
+			background: $color-music;
 		}
+	}
+
+	&--code {
+		background: $color-code;
+
+		&:hover {
+			background: $color-code;
+		}
+	}
+
+	&--hireme {
+		background: $color-hireme;
 	}
 
 	&--search {

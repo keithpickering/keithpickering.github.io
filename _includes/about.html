@@ -1,3 +1,7 @@
 <section class="island island--xl about delta">
-	Like what you see? <a href="/hire-me" class="btn btn--lg btn--hireme btn--raised">Hire Me</a>
+	<p>Like what you see? <a href="/hire-me" class="btn btn--lg about__btn btn--hireme btn--raised">Hire Me</a></p>
+	{% if page.categories != null %}
+		<p class="epsilon">- OR -</p>
+		<p>Check out more <a href="{{ site.baseurl }}/{{ page.categories[0] }}" class="btn btn--lg about__btn btn--{{ page.categories[0] }} btn--raised">{{ page.categories[0] | capitalize }}</a></p>
+	{% endif %}
 </section>
