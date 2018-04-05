@@ -14,4 +14,5 @@ image: "main.jpg"
 <div class="gallery">
 	{% include figure.html img="marble-hornets-box/01.jpg" caption="Front cover" %}
 	{% include figure.html img="marble-hornets-box/02.jpg" caption="Photo of the final product" %}
+	{% include figure.html img="marble-hornets-box/bluray.jpg" caption="A box full of signed Blu-rays" %}
 </div>

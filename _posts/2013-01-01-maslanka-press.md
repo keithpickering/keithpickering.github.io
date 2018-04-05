@@ -11,7 +11,7 @@ image: "1.jpg"
 	WooCommerce site for a sheet music ordering service
 </p>
 
-This site used a 100% custom WordPress/WooCommerce theme created by myself, with a lot of custom functionality. Unfortunately it's not currently online.
+This site used a 100% custom WordPress/WooCommerce theme created by myself, with a lot of custom functionality.
 
 <div class="gallery">
 	{% include figure.html img="maslanka-press/2.jpg" caption="Product listing page" %}
