@@ -143,7 +143,7 @@ var Page = {
 				setTimeout(function() {
 					preloader.style.display = "none";
 				}, 500);
-			}, 3000);
+			}, 2000);
 			window.addEventListener("load", function() {
 				clearTimeout(timer);
 				preloader.classList.add("preloader--hidden");

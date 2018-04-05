@@ -80,4 +80,17 @@
 			@include box-shadow(2);
 		}
 	}
+
+	&__link {
+		color: white;
+		font-family: $heading-font-light;
+		font-size: $delta;
+		margin-left: $spacing;
+		text-transform: uppercase;
+		opacity: 0.5;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
 }

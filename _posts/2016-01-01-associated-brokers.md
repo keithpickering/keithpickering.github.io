@@ -9,7 +9,7 @@ image: "00.jpg"
 ---
 
 <p class="post--full__excerpt">
-	Excerpt
+	WordPress site for a local real estate company
 </p>
 
 

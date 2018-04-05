@@ -1,6 +1,5 @@
 ---
 layout: default
-pageType: page--post
 ---
 
 <div id="preloader" class="preloader">
@@ -21,7 +20,14 @@ pageType: page--post
 	{% endif %}
 	<header id="page-title" class="page-title">
 		<div class="wrapper wrapper--padded">
-			<h1>{{ page.title }}</h1>
+			<h1>
+				{{ page.title }}
+				{% if page.exturl %}
+					<a title="Visit {{ page.title }}" href="{{ page.exturl }}" class="page-title__link">
+						<i class="fas fa-external-link-alt"></i>
+					</a>
+				{% endif %}
+			</h1>
 		</div>
 		<button id="page-title-skip" class="page-title__skip" type="button">
 			<i class="fa-fw fas fa-chevron-down"></i>
