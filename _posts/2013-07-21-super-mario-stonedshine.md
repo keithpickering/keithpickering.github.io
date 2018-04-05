@@ -8,11 +8,11 @@ image: "main.png"
 ---
 
 <p class="post--full__excerpt">
-	I have no excuse for this, sorry for your childhood.
+	I have no excuse for this but at least it's funny
 </p>
 
-This was just a weird funny drawing I decided to do a few years ago, originally posted to DeviantArt. That said, it's been stolen so many times that I figured I should post it here to declare my ownership.
+This was just a weird drawing I decided to do a few years ago, originally posted to DeviantArt. That said, it's been stolen so many times that I figured I should post it here.
 
-Style-wise, this image is a replica of the official style Nintendo typically uses for 2D Mario art. Matching styles is always a fun challenge, and luckily this one is pretty simple. The result is an inappropriate drawing which looks like official art. Discomfort achieved!
+Style-wise, this image is a replica of the official style Nintendo typically uses for 2D Mario art. Matching styles is always a fun challenge. The result is an inappropriate drawing which looks like official art. Discomfort achieved!
 
 Tools Used: Illustrator
