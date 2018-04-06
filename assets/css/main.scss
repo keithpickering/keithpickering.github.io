@@ -30,6 +30,7 @@ $fa-font-path: "/assets/fonts/fontawesome";
 @import "objects/figure";
 @import "objects/island";
 @import "objects/gallery";
+@import "objects/module";
 
 // Components
 @import "components/preloader";
@@ -41,6 +42,7 @@ $fa-font-path: "/assets/fonts/fontawesome";
 @import "components/page-title";
 @import "components/category-intro";
 @import "components/post";
+@import "components/graph";
 @import "components/about";
 @import "components/page-foot";
 

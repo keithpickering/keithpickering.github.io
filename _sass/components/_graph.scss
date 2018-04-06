@@ -1,0 +1,156 @@
+.graph {
+	display: flex;
+	align-items: stretch;
+	height: 60vh;
+	max-width: 900px;
+	padding-bottom: $spacing*4;
+	margin-bottom: $spacing;
+	margin-top: $spacing;
+	margin-left: auto;
+	margin-right: auto;
+	overflow-x: auto;
+
+	&__yaxis {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		list-style: none;
+		margin-right: $spacing;
+		text-align: right;
+	}
+
+	&__items {
+		display: flex;
+		flex: 1;
+		align-items: stretch;
+		height: 100%;
+		border-bottom: 1px solid $graph-line-color;
+		/*background: repeating-linear-gradient(
+		    to bottom,
+			$graph-line-color,
+			$graph-line-color 1px,
+			transparent 1px,
+			transparent 33.333%
+		);*/
+	}
+
+	&__item {
+		position: relative;
+		flex: 1;
+		width: 0;
+		max-width: $spacing*3;
+		min-width: $spacing;
+		height: 100%;
+		margin-right: $spacing-lg;
+
+		&:first-child {
+			margin-left: $spacing-sm;
+		}
+
+		&__bar {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: material-color('green', '400');
+			transition: all 200ms;
+			transform-origin: bottom center;
+
+			> span {
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				height: $spacing;
+				margin-left: -$spacing/2;
+				margin-bottom: -$spacing-sm;
+				display: block;
+				transform-origin: left top 0;
+				transform: rotate(-90deg);
+				color: white;
+				white-space: nowrap;
+				pointer-events: none;
+			}
+		}
+
+		&:hover {
+			.graph__item__bar {
+				//transform: scaleY(1.025);
+			}
+		}
+
+		&__name {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			padding-top: $spacing-sm;
+			text-align: center;
+
+			> i {
+				display: block;
+				margin: 0 auto;
+				font-size: $beta;
+			}
+
+			> span {
+				@extend .accessibility;
+			}
+		}
+
+		&--wp {
+			color: $color-wp;
+
+			> .graph__item__bar {
+				background: $color-wp;
+			}
+		}
+
+		&--html {
+			color: $color-html;
+
+			> .graph__item__bar {
+				background: $color-html;
+			}
+		}
+
+		&--css {
+			color: $color-css;
+
+			> .graph__item__bar {
+				background: $color-css;
+			}
+		}
+
+		&--js {
+			color: $color-js;
+
+			> .graph__item__bar {
+				background: $color-js;
+			}
+		}
+
+		&--php {
+			color: $color-php;
+
+			> .graph__item__bar {
+				background: $color-php;
+			}
+		}
+
+		&--angular {
+			color: $color-angular;
+
+			> .graph__item__bar {
+				background: $color-angular;
+			}
+		}
+
+		&--git {
+			color: $color-git;
+
+			> .graph__item__bar {
+				background: $color-git;
+			}
+		}
+	}
+}
