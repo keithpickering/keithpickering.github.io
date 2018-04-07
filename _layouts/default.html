@@ -72,7 +72,17 @@
 	</main>
 
 	<footer id="page-foot" class="page-foot">
-		&copy; {{ 'now' | date: "%Y" }} Keith Pickering
+		<div class="wrapper">
+			<div class="pull-left">
+				&copy; {{ 'now' | date: "%Y" }} Keith Pickering
+			</div>
+			<div class="pull-right">
+				<a href="{{ site.baseurl }}/">Home</a>
+				<a href="{{ site.baseurl }}/art">Art</a>
+				<a href="{{ site.baseurl }}/code">Code</a>
+				<a href="{{ site.baseurl }}/music">Music</a>
+			</div>
+		</div>
 	</footer>
 
 	<script src="{{ site.baseurl }}/assets/js/search.js"></script>

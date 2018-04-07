@@ -1,14 +1,34 @@
 .graph {
+	position: relative;
 	display: flex;
 	align-items: stretch;
-	height: 65vh;
+	height: 50vh;
 	max-width: 900px;
 	margin-bottom: $spacing;
 	margin-top: $spacing;
 	margin-left: auto;
 	margin-right: auto;
 
+	@include mq($from: desktop) {
+		height: 65vh;
+	}
+
+	&:after {
+		content: '';
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    bottom: 0;
+	    width: $spacing-sm;
+	    background: linear-gradient(to left, lighten(material-color('blue-grey', '100'),10%), transparent);
+	
+	    @include mq($from: desktop) {
+	    	display: none;
+	    }
+	}
+
 	&__yaxis {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -18,8 +38,19 @@
 		text-align: right;
 		font-size: $zeta;
 
-		@include mq($from: tablet) {
+		@include mq($from: desktop) {
 			font-size: $epsilon;
+		}
+
+		&:after {
+			content: '';
+		    position: absolute;
+		    left: calc(100% + #{$spacing} - 1px);
+		    top: 0;
+		    bottom: 0;
+		    width: $spacing-sm;
+		    z-index: 1;
+		    background: linear-gradient(to right, lighten(material-color('blue-grey', '100'),10%), transparent);
 		}
 	}
 
@@ -39,18 +70,18 @@
 			transparent 33.333%
 		);*/
 
-		@include mq($from: tablet) {
+		@include mq($from: desktop) {
 			overflow-x: visible;
-		}
 
-		&:after {
-			content: '';
-			position: absolute;
-			bottom: $beta + $spacing-sm;
-			left: 0;
-			width: 100%;
-			height: 1px;
-			background: $graph-line-color;
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: $beta + $spacing-sm;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				background: $graph-line-color;
+			}
 		}
 	}
 
@@ -63,7 +94,7 @@
 		height: 100%;
 		margin-right: $spacing;
 
-		@include mq($from: tablet) {
+		@include mq($from: desktop) {
 			margin-right: $spacing-lg;
 		}
 
