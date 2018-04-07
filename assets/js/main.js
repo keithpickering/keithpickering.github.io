@@ -177,6 +177,9 @@ var sjs,
 
 	closeSearch: function() {
 		this.settings.searchElem.classList.remove("page-search--open");
+		//this.settings.searchInputElem.value = "";
+		//this.closeResults();
+		//this.settings.searchResultsElem.innerHTML = "";
 		this.searchOpen = false;
 	},
 
