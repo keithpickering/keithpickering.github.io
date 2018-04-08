@@ -1,0 +1,9 @@
+.list {
+	margin-bottom: $spacing;
+
+	> li {
+		padding: $spacing-sm;
+		border-bottom: 1px solid material-color('blue-grey', '100');
+		list-style: none;
+	}
+}
