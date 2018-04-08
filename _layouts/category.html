@@ -19,7 +19,7 @@ layout: page
 						<div class="media media--fixed">
 							{% if post.image %}
 								<a class="media__img" href="{{ post.url | absolute_url }}" class="post__image post--excerpt__image">
-									<img src="/assets/images/posts/{{ post.permalink }}square/{{ post.image }}" alt="">
+									{% include img.html src=post.image size="square" %}
 								</a>
 							{% endif %}
 							<div class="media__body">
@@ -39,8 +39,9 @@ layout: page
 				{% else %}
 					<article class="post post--excerpt post--{{ post.categories[0] }}">
 						{% if post.image %}
+							{% assign img = post.image | split: "/" %}
 							<a href="{{ post.url | absolute_url }}" class="post__image post--excerpt__image">
-								<img src="/assets/images/posts/{{ post.permalink }}medium/{{ post.image }}" alt="">
+								{% include img.html src=post.image size="medium" %}
 							</a>
 						{% endif %}
 					    <header class="post__header">

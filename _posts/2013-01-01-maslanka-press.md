@@ -4,7 +4,7 @@ title:  "Maslanka Press"
 categories: code
 tags: web-development html css javascript wordpress woocommerce php
 permalink: /maslanka-press/
-image: "1.jpg"
+image: "assets/images/posts/maslanka-press/1.jpg"
 ---
 
 <p class="post--full__excerpt">

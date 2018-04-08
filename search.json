@@ -3,13 +3,14 @@ layout: null
 ---
 [
   {% for post in site.posts %}
+  	{% capture img %}{% include img.html src=post.image size='square' raw='true' %}{% endcapture %}
     {
       "title"    : "{{ post.title | escape }}",
       "category" : "{{ post.categories[0] }}",
       "tags"     : "{{ post.tags | join: ', ' }}",
       "url"      : "{{ site.baseurl }}{{ post.url }}",
       "date"     : "{{ post.date }}",
-      "image"    : "square/{{ post.image }}",
+      "image"    : "{{ img | escape | strip_newlines }}",
       "permalink": "{{ post.permalink }}"
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}

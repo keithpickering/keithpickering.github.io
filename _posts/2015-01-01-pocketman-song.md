@@ -4,7 +4,7 @@ title:  "Pocketman Theme Song"
 date:   2017-01-01
 categories: music
 permalink: /pocketman-theme-song/
-image: "main.png"
+image: "assets/images/posts/pocketman-theme-song/main.png"
 ---
 
 <p class="post--full__excerpt">

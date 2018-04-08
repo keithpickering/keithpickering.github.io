@@ -225,7 +225,7 @@ var sjs,
 		  json: '/search.json',
 		  searchResultTemplate: '<a href="{url}" class="media media--middle {category}">'+
 									'<div class="media__img">'+
-										'<img src="/assets/images/posts{permalink}{image}" alt="">'+
+										'<img src="{image}" alt="">'+
 									'</div>'+
 									'<div class="media__body">'+
 										'{title}'+

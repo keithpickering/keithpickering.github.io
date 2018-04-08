@@ -8,13 +8,14 @@ layout: default
 
 <article class="post post--full post--{{ page.categories[0] }}">
 	{% if page.image and page.categories[0] != "music" %}
+		{% capture img %}{% include img.html src=page.image size='large' raw='true' %}{% endcapture %}
 		<div class="post__image">
 			{% if page.exturl %}
 				<a href="{{ page.exturl }}">
 			{% else %}
-				<a href="/assets/images/posts{{ page.permalink }}large/{{ page.image }}">
+				<a href="{{ img | strip_newlines }}">
 			{% endif %}
-					<img src="/assets/images/posts{{ page.permalink }}large/{{ page.image }}" alt="">
+					<img src="{{ img | strip_newlines }}" alt="">
 				</a>
 		</div>
 	{% endif %}

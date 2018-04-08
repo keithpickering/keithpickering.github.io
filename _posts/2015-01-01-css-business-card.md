@@ -5,7 +5,7 @@ date:   2013-07-21
 categories: code
 permalink: /css-business-card/
 exturl: "https://codepen.io/keithpickering/pen/XJeJMv"
-image: "00.jpg"
+image: "assets/images/posts/css-business-card/00.jpg"
 ---
 
 <p class="post--full__excerpt">

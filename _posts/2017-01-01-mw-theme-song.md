@@ -4,7 +4,7 @@ title:  "Minus World Theme Song"
 date:   2017-01-01
 categories: music
 permalink: /mw-theme-song/
-image: "feeling_fab.png"
+image: "assets/images/posts/mw-theme-song/feeling_fab.png"
 ---
 
 <p class="post--full__excerpt">

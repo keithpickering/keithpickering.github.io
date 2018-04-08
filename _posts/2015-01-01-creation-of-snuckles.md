@@ -4,7 +4,7 @@ title:  "Creation of Snuckles"
 date:   2013-01-01
 categories: art
 permalink: /creation-of-snuckles/
-image: "00.jpg"
+image: "assets/images/posts/creation-of-snuckles/00.jpg"
 ---
 
 <p class="post--full__excerpt">

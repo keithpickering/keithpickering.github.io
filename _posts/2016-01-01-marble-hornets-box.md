@@ -4,7 +4,7 @@ title:  "Marble Hornets: Box Set"
 date:   2016-01-01
 categories: art
 permalink: /marble-hornets-box/
-image: "main.jpg"
+image: "assets/images/posts/marble-hornets-box/main.jpg"
 ---
 
 <p class="post--full__excerpt">

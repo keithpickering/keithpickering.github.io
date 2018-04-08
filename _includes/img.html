@@ -1,0 +1,13 @@
+{% assign img = include.src | split: "/" %}
+{% assign img_count = img | size %}
+{% assign url = site.baseurl %}
+{% for i in img %}
+	{% if forloop.index != img_count - 1 %}
+		{% assign url = url | append: "/" | append: i %}
+	{% else %}
+		{% assign url = url | append: "/" | append: include.size | append: "/" | append: i %}
+	{% endif %}
+{% endfor %}
+{% if include.raw == 'true' %}{{ url }}{% else %}
+	<img src="{{ url }}" alt="{{ include.alt }}">
+{% endif %}

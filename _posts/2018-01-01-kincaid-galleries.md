@@ -5,7 +5,7 @@ categories: code
 tags: web-development html css php wordpress woocommerce javascript
 permalink: /kincaid-galleries/
 exturl: "https://www.kincaidgalleries.com"
-image: "1.jpg"
+image: "assets/images/posts/kincaid-galleries/1.jpg"
 ---
 
 <p class="post--full__excerpt">

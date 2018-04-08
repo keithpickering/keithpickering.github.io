@@ -6,7 +6,7 @@ categories: code
 tags: web-development wordpress html css
 permalink: /associated-brokers/
 exturl: "http://edpickering.com"
-image: "1.jpg"
+image: "assets/images/posts/associated-brokers/1.jpg"
 ---
 
 <p class="post--full__excerpt">

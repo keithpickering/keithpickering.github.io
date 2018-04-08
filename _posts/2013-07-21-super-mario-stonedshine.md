@@ -4,7 +4,7 @@ title:  "Super Mario Stonedshine"
 date:   2013-07-21
 categories: art
 permalink: /super-mario-stonedshine/
-image: "main.png"
+image: "assets/images/posts/super-mario-stonedshine/main.png"
 ---
 
 <p class="post--full__excerpt">

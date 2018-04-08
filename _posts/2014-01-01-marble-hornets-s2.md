@@ -4,7 +4,7 @@ title:  "Marble Hornets: Season 2"
 date:   2014-01-01
 categories: art
 permalink: /marble-hornets-s2/
-image: "main.jpg"
+image: "assets/images/posts/marble-hornets-s2/main.jpg"
 ---
 
 <p class="post--full__excerpt">
