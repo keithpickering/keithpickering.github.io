@@ -14,7 +14,8 @@
 		text-transform: uppercase;
 		color: material-color('blue-grey', '500');
 		display: inline-block;
-		margin-right: $spacing-sm;
+		padding: 0 $spacing/4;
+		transition: background 100ms;
 
 		&:nth-child(1) {
 			color: $color-hireme;
@@ -30,6 +31,10 @@
 
 		&:nth-child(4) {
 			color: $color-music;
+		}
+
+		&:hover {
+			//background: material-color('blue-grey', '600');
 		}
 	}
 
