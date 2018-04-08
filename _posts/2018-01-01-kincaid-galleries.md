@@ -12,7 +12,7 @@ image: "assets/images/posts/kincaid-galleries/1.jpg"
 	WooCommerce site for a business establishing photography galleries in resorts around the world
 </p>
 
-This site uses a modified version of the "John Black" theme with a lot of added functionality.
+This site uses a heavily customized version of the "JohnBlack" WordPress theme. Some great prints are still available, so take a look!
 
 <div class="gallery">
 	{% include figure.html img="kincaid-galleries/2.jpg" caption="Category select page" %}
