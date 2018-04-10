@@ -1,5 +1,6 @@
 name: Keith Pickering
 baseurl: 
+description: Personal site and showcase of Keith Pickering, web developer, graphic designer, and musician. Come check out my projects and learn how we can work together!
 permalink: pretty
 sass:
     sass_dir: _sass
