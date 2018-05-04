@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "SMPE Soundtrack"
-date:   2017-01-01
+date:   2018-05-01
 categories: music
 permalink: /smpe-soundtrack/
 image: "assets/images/posts/smpe-soundtrack/main.jpg"
