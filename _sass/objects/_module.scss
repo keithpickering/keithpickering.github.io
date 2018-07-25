@@ -5,5 +5,10 @@
 	h2 {
 		margin-bottom: $spacing-lg;
 		text-align: center;
+		font-size: $gamma;
+
+		@include mq($from: tablet) {
+			font-size: $beta;
+		}
 	}
 }

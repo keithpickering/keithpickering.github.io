@@ -18,10 +18,14 @@ body {
 
 body {
 	font-family: $body-font;
-	font-size: $base-font-size;
+	font-size: $epsilon;
 	line-height: $base-line-height;
 	background: linear-gradient(to top, lighten(material-color('blue-grey', '100'), 10%) 70%, material-color('blue-grey', '100') 100%);
 	color: material-color('blue-grey', '900');
+
+	@include mq($from: desktop) {
+		font-size: $delta;
+	}
 }
 
 .preload * {

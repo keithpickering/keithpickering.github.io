@@ -13,11 +13,14 @@
 .testimonial {
 	position: relative;
 	margin-bottom: $spacing;
-	padding: $spacing*2;
-	padding-bottom: $spacing*3;
+	padding: $spacing;
+	padding-bottom: $spacing*4;
 	background: white;
 
 	@include mq($from: desktop) {
+		padding-top: $spacing*2;
+		padding-left: $spacing*2;
+		padding-right: $spacing*2;
 		width: calc(50% - #{$spacing});
 		margin-right: $spacing;
 	}
@@ -35,5 +38,10 @@
 		font-style: normal;
 		max-width: calc(100% - #{$spacing*2});
 		color: material-color('blue-grey', '400');
+
+		/*@include mq($from: desktop) {
+			right: $spacing*2;
+			bottom: $spacing*2;
+		}*/
 	}
 }

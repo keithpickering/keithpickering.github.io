@@ -3,5 +3,11 @@
 }
 
 .page-content {
-	padding-bottom: $spacing;
+	padding-bottom: $spacing-xl;
+	padding-top: $spacing-sm;
+
+	@include mq($from: tablet) {
+		padding-bottom: $spacing-xxl;
+		padding-top: $spacing-lg;
+	}
 }

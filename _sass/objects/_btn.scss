@@ -64,8 +64,22 @@
 	margin: $spacing*2 0;
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
+
+	@include mq($from: tablet) {
+		flex-wrap: nowrap;
+	}
 
 	> .btn {
-		margin-right: $spacing;
+		margin-bottom: $spacing;
+		margin-right: 0;
+		width: 100%;
+		text-align: center;
+
+		@include mq($from: tablet) {
+			width: 250px;
+			margin-bottom: 0;
+			margin-right: $spacing;
+		}
 	}
 }
