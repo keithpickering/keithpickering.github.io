@@ -54,6 +54,16 @@
 		}
 	}
 
+	&-note {
+		text-align: center;
+		font-size: $zeta;
+		text-transform: uppercase;
+
+		@include mq($from: desktop) {
+			display: none;
+		}
+	}
+
 	&__items {
 		position: relative;
 		display: flex;
@@ -124,6 +134,11 @@
 				color: white;
 				white-space: nowrap;
 				pointer-events: none;
+				font-size: $zeta;
+
+				@include mq($from: desktop) {
+					font-size: $delta;
+				}
 			}
 		}
 

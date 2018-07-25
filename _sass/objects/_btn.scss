@@ -26,6 +26,10 @@
 		}
 	}
 
+	&--transparent {
+		background: transparent;
+	}
+
 	&--default,
 	&--art {
 		background: material-color('blue', '400');
@@ -57,6 +61,7 @@
 
 	&--search {
 		padding: $spacing-sm/2 $spacing-sm;
+		background: transparent;
 	}
 
 	.alpha &,
