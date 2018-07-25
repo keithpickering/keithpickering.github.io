@@ -207,5 +207,13 @@
 				background: $color-git;
 			}
 		}
+
+		&--react {
+			color: $color-react;
+
+			> .graph__item__bar {
+				background: $color-react;
+			}
+		}
 	}
 }

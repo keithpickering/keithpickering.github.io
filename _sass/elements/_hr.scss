@@ -1,7 +1,7 @@
 hr {
 	width: 100%;
-	border: 0;
-	height: 1px;
+	height: 0;
 	margin-bottom: $spacing;
-	background: material-color('blue-grey', '200');
+	border: 0;
+	border-bottom: 1px solid material-color('blue-grey', '200');
 }

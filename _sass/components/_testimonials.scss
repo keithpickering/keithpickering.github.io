@@ -1,0 +1,39 @@
+.testimonials {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: -$spacing;
+	margin-top: $spacing*2;
+	
+	@include mq($from: desktop) {
+		width: calc(100% + #{$spacing});
+	}
+}
+
+.testimonial {
+	position: relative;
+	margin-bottom: $spacing;
+	padding: $spacing*2;
+	padding-bottom: $spacing*3;
+	background: white;
+
+	@include mq($from: desktop) {
+		width: calc(50% - #{$spacing});
+		margin-right: $spacing;
+	}
+
+	> p {
+		font-size: $delta;
+		line-height: 1.4;
+	}
+
+	&__cite {
+		position: absolute;
+		right: $spacing;
+		bottom: $spacing;
+		text-transform: uppercase;
+		font-style: normal;
+		max-width: calc(100% - #{$spacing*2});
+		color: material-color('blue-grey', '400');
+	}
+}

@@ -9,7 +9,7 @@
 	outline: 0;
 	color: white;
 	cursor: pointer;
-	background: transparent;
+	background: material-color('blue-grey', '400');
 	transition: box-shadow 200ms, background 200ms;
 
 	&--lg {
@@ -57,5 +57,15 @@
 
 	&--search {
 		padding: $spacing-sm/2 $spacing-sm;
+	}
+}
+
+.btn-group {
+	margin: $spacing*2 0;
+	display: flex;
+	justify-content: center;
+
+	> .btn {
+		margin-right: $spacing;
 	}
 }
