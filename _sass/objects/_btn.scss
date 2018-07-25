@@ -58,6 +58,12 @@
 	&--search {
 		padding: $spacing-sm/2 $spacing-sm;
 	}
+
+	.alpha &,
+	.beta &,
+	.gamma & {
+		font-weight: 700;
+	}
 }
 
 .btn-group {
