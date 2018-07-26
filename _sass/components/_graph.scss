@@ -9,7 +9,7 @@
 	margin-left: auto;
 	margin-right: auto;
 
-	@include mq($from: desktop) {
+	@include mq($from: wide) {
 		height: 65vh;
 	}
 
@@ -22,7 +22,7 @@
 	    width: $spacing-sm;
 	    background: linear-gradient(to left, lighten(material-color('blue-grey', '100'),10%), transparent);
 	
-	    @include mq($from: desktop) {
+	    @include mq($from: wide) {
 	    	display: none;
 	    }
 	}
@@ -38,7 +38,7 @@
 		text-align: right;
 		font-size: $zeta;
 
-		@include mq($from: desktop) {
+		@include mq($from: wide) {
 			font-size: $epsilon;
 		}
 
@@ -59,7 +59,7 @@
 		font-size: $zeta;
 		text-transform: uppercase;
 
-		@include mq($from: desktop) {
+		@include mq($from: wide) {
 			display: none;
 		}
 	}
@@ -80,7 +80,7 @@
 			transparent 33.333%
 		);*/
 
-		@include mq($from: desktop) {
+		@include mq($from: wide) {
 			overflow-x: visible;
 
 			&:after {
@@ -104,7 +104,7 @@
 		height: 100%;
 		margin-right: $spacing;
 
-		@include mq($from: desktop) {
+		@include mq($from: wide) {
 			margin-right: $spacing-lg;
 		}
 
@@ -113,12 +113,14 @@
 		}
 
 		&__bar {
+			overflow: hidden;
 			position: absolute;
 			bottom: 0;
 			left: 0;
 			right: 0;
+			height: 0;
 			background: material-color('green', '400');
-			transition: all 200ms;
+			transition: all 1.5s ease-in-out;
 			transform-origin: bottom center;
 
 			> span {
@@ -136,7 +138,7 @@
 				pointer-events: none;
 				font-size: $zeta;
 
-				@include mq($from: desktop) {
+				@include mq($from: wide) {
 					font-size: $delta;
 				}
 			}

@@ -17,6 +17,17 @@ function getCookie(name) {
     return decodeURI(dc.substring(begin + prefix.length, end));
 } 
 
+function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
 function getElementPosition(elem) {
     var offsetLeft = 0;
     var offsetTop = 0;
@@ -325,11 +336,51 @@ var Post = {
 	}
 };
 
+var HireMe = {
+	init: function() {
+		var $graphItems = document.querySelectorAll('.graph__items')[0],
+			$graphNote  = document.querySelectorAll('.graph-note')[0],
+			$graphBars  = document.querySelectorAll('.graph__item__bar');
+
+		window.addEventListener('resize', function() {
+			var w = $graphItems.clientWidth,
+				s = $graphItems.scrollWidth;
+
+			if (w >= s) {
+				$graphNote.style.display = 'none';
+			} else {
+				$graphNote.style.display = 'block';
+			}
+		});
+
+		window.dispatchEvent(new Event('resize'));
+
+		var graphShown = false;
+		window.addEventListener('scroll', function() {
+			if (!graphShown && isElementInViewport($graphItems)) {
+				graphShown = true;
+				for (var i = 0; i < $graphBars.length; i++) {
+					var $bar = $graphBars[i],
+						h    = $bar.dataset.height;
+
+					$bar.style.height = h + '%';
+				}
+			}
+		});
+
+		window.dispatchEvent(new Event('scroll'));
+	}
+};
+
 (function() {
 	Page.init();
 	Search.init();
 
 	if (document.getElementsByClassName("post--full").length) {
 		Post.init();
+	}
+
+	if (document.getElementsByClassName('page--hireme').length) {
+		HireMe.init();
 	}
 })();
