@@ -64,6 +64,7 @@
 		background: white;
 		color: material-color('blue-grey', '800');
 		transition: transform 1s;
+		font-size: $epsilon;
 
 		@include mq($from: tablet) {
 			max-width: 350px;
