@@ -36,13 +36,13 @@
 		right: $spacing;
 		bottom: $spacing;
 		text-transform: uppercase;
+		text-align: right;
 		font-style: normal;
 		max-width: calc(100% - #{$spacing*2});
 		color: material-color('blue-grey', '400');
 
-		/*@include mq($from: desktop) {
-			right: $spacing*2;
-			bottom: $spacing*2;
-		}*/
+		> strong {
+			color: material-color('blue-grey', '700');
+		}
 	}
 }
