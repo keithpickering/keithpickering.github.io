@@ -5,7 +5,7 @@ date:   2018-10-18
 categories: code
 tags: web-development wordpress html css sass
 permalink: /witches-vote/
-exturl: "http://witchesvote.com"
+exturl: "http://witchesvote.com?active"
 image: "assets/images/posts/witches-vote/0.jpg"
 ---
 
