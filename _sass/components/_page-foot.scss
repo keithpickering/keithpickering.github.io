@@ -1,18 +1,12 @@
 .page-foot {
 	width: 100%;
 	//height: $spacing*3;
-	padding: $spacing-sm;
+	padding: $spacing;
     padding-bottom: $spacing-xl;
 	background: material-color('blue-grey', '800');
 	color: material-color('blue-grey', '500');
 	text-align: center;
 	font-size: $epsilon;
-
-	@include mq($from: tablet) {
-		padding-top: $spacing;
-        padding-right: $spacing;
-        padding-left: $spacing;
-	}
 
 	a {
         font-weight: 700;
@@ -56,8 +50,10 @@
 	}
 
 	&__copy {
+        margin-bottom: $spacing;
 		text-align: center;
 		@include mq($from: tablet) {
+            margin-bottom: 0;
 			text-align: left;
 			float: left;
 		}
