@@ -1,5 +1,6 @@
 .posts {
 	margin-bottom: $spacing-xl;
+    padding-top: $spacing;
 
 	& {
 		display: grid;
@@ -62,10 +63,10 @@
 	}
 
 	&--excerpt {
-		border: 1px solid material-color('blue-grey', '100');
+		//border: 1px solid material-color('blue-grey', '100');
 
 		&__image {
-			border-bottom: 1px solid material-color('blue-grey', '100');
+			//border-bottom: 1px solid material-color('blue-grey', '100');
 			background: material-color('blue-grey', '100');
 			width: 100%;
 			padding-bottom: 75%;

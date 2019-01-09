@@ -3,5 +3,5 @@ hr {
 	height: 0;
 	margin-bottom: $spacing;
 	border: 0;
-	border-bottom: 1px solid material-color('blue-grey', '200');
+	border-bottom: 6px solid lighten(material-color('blue-grey', '100'), 4%);
 }

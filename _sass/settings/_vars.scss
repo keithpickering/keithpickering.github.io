@@ -1,8 +1,8 @@
-$spacing: 24px;
-$spacing-sm: 12px;
-$spacing-lg: 36px;
-$spacing-xl: 48px;
-$spacing-xxl: 72px;
+$spacing: 28px;
+$spacing-sm: $spacing/2;
+$spacing-lg: $spacing+$spacing-sm;
+$spacing-xl: $spacing*2;
+$spacing-xxl: $spacing*3;
 
 $header-height-mobile: 180px;
 $header-height-desktop: 180px;
@@ -32,5 +32,5 @@ $color-hireme: material-color('green', '400');
 // Links
 $link-color: material-color('blue', '400');
 
-$graph-line-color: material-color('blue-grey', '200');
+$graph-line-color: lighten(material-color('blue-grey', '100'), 4%);
 

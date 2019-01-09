@@ -7,10 +7,12 @@
 	text-transform: uppercase;
 	border: 0;
 	outline: 0;
-	color: white;
+	color: white !important;
 	cursor: pointer;
 	background: material-color('blue-grey', '400');
-	transition: box-shadow 200ms, background 200ms;
+	transition: box-shadow 200ms,
+                background 200ms,
+                transform 200ms;
 
 	&--lg {
 		line-height: $spacing-xl;
@@ -19,10 +21,11 @@
 	}
 
 	&--raised {
-		//@include box-shadow(1);
+		@include box-shadow(1);
 
 		&:hover {
-			@include box-shadow(1);
+			@include box-shadow(2);
+            transform: translateY(-4px);
 		}
 	}
 

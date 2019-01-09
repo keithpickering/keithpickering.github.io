@@ -45,7 +45,7 @@
 		&:after {
 			content: '';
 		    position: absolute;
-		    left: calc(100% + #{$spacing} - 1px);
+		    left: calc(100% + #{$spacing} - 2px);
 		    top: 0;
 		    bottom: 0;
 		    width: $spacing-sm;
@@ -89,7 +89,7 @@
 				bottom: $beta + $spacing-sm;
 				left: 0;
 				width: 100%;
-				height: 1px;
+				height: 2px;
 				background: $graph-line-color;
 			}
 		}

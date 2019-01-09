@@ -21,7 +21,7 @@ body {
 	font-size: $epsilon;
 	line-height: $base-line-height;
 	background: linear-gradient(to top, lighten(material-color('blue-grey', '100'), 10%) 70%, material-color('blue-grey', '100') 100%);
-	color: material-color('blue-grey', '900');
+	color: material-color('blue-grey', '800');
 
 	@include mq($from: desktop) {
 		font-size: $delta;

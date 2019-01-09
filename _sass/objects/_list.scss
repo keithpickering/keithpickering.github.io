@@ -3,7 +3,7 @@
 
 	> li {
 		padding: $spacing-sm;
-		border-bottom: 1px solid material-color('blue-grey', '100');
+		border-bottom: 2px solid lighten(material-color('blue-grey', '100'), 4%);
 		list-style: none;
 	}
 }
