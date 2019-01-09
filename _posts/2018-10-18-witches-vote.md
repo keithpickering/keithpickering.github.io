@@ -6,7 +6,7 @@ categories: code
 tags: web-development wordpress html css sass
 permalink: /witches-vote/
 exturl: "http://witchesvote.com"
-image: "assets/images/posts/witches-vote/0.jpg"
+image: "assets/images/posts/witches/main.jpg"
 ---
 
 <p class="post--full__excerpt">

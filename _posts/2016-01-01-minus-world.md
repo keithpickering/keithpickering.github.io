@@ -4,7 +4,7 @@ title:  "Minus World"
 categories: code
 permalink: /minus-world/
 exturl: "https://minus.world"
-image: "assets/images/posts/minus-world/1.jpg"
+image: "assets/images/posts/minus-world/main.jpg"
 ---
 
 <p class="post--full__excerpt">

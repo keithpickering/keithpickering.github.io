@@ -5,7 +5,7 @@ categories: code
 tags: web-development html css sass javascript
 permalink: /imbue-theme/
 exturl: "https://keithpickering.github.io/imbue"
-image: "assets/images/posts/imbue-theme/desktop.jpg"
+image: "assets/images/posts/imbue-theme/main.jpg"
 ---
 
 <p class="post--full__excerpt">
