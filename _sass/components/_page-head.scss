@@ -5,6 +5,7 @@
 	text-align: center;
 	background: material-color('blue-grey', '800');
 	color: white;
+    @include box-shadow(1);
 
 	&__logo {
 		margin-bottom: $spacing-sm;

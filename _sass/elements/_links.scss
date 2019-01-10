@@ -1,6 +1,7 @@
 a {
 	text-decoration: none;
 	color: $link-color;
+    transition: all 250ms;
 
     .page--code & {
         color: $color-code;

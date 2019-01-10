@@ -1,5 +1,6 @@
 .page-body {
 	min-height: calc(100vh - #{$header-height-mobile});
+    @include box-shadow(1);
 }
 
 .page-content {
