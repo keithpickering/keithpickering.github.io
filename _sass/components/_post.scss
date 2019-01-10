@@ -63,7 +63,8 @@
 	}
 
 	&--excerpt {
-		//border: 1px solid material-color('blue-grey', '100');
+		box-shadow: 0 1px 1px rgba(0,0,0,0.12),
+                    0 3px 6px rgba(0,0,0,0.06);
 
 		&__image {
 			//border-bottom: 1px solid material-color('blue-grey', '100');

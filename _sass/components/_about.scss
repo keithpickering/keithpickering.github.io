@@ -1,6 +1,6 @@
 .about {
 	text-align: center;
-	background: material-color('blue-grey', '100');
+	background: lighten(material-color('blue-grey', '100'), 4%);
 
 	&__btn {
 		margin-top: $spacing;
