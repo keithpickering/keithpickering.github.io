@@ -2,6 +2,7 @@
 	margin-bottom: $spacing;
 	padding: $spacing-sm;
 	//border: 1px solid material-color('blue-grey', '100');
+    background: white;
 	@include box-shadow(1);
 	@include mq($from: tablet) {
 		//margin-bottom: $spacing-lg;
