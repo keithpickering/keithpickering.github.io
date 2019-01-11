@@ -3,7 +3,9 @@
 	height: $spacing-lg;
 	padding: 0 $spacing-sm;
 	line-height: $spacing-lg;
-	font-family: $heading-font-light;
+	font-family: $heading-font-bold;
+    font-size: $delta;
+    font-weight: 300;
 	text-transform: uppercase;
 	border: 0;
 	outline: 0;
@@ -25,7 +27,7 @@
 
 		&:hover {
 			@include box-shadow(2);
-            transform: translateY(-4px);
+            transform: translateY(-2px);
 		}
 	}
 
@@ -65,12 +67,6 @@
 	&--search {
 		padding: $spacing-sm/2 $spacing-sm;
 		background: transparent;
-	}
-
-	.alpha &,
-	.beta &,
-	.gamma & {
-		font-weight: 700;
 	}
 }
 
