@@ -9,9 +9,9 @@
 	text-transform: uppercase;
 	border: 0;
 	outline: 0;
-	color: white !important;
+	color: material-color('blue-grey', '400') !important;
 	cursor: pointer;
-	background: material-color('blue-grey', '400');
+	background: lighten(material-color('blue-grey', '100'), 5%);
 	transition: box-shadow 200ms,
                 background 200ms,
                 transform 200ms;
@@ -34,6 +34,14 @@
 	&--transparent {
 		background: transparent;
 	}
+
+    &--default,
+    &--art,
+    &--music,
+    &--code,
+    &--hireme {
+        color: white !important;
+    }
 
 	&--default,
 	&--art {
