@@ -3,11 +3,17 @@
 	background: lighten(material-color('blue-grey', '100'), 4%);
 
 	&__btn {
+        display: block;
 		margin-top: $spacing;
 
 		@include mq($from: tablet) {
+            display: inline-block;
 			margin-top: 0;
 			margin-left: $spacing-sm;
 		}
 	}
+
+    @include mq($until: tablet) {
+        font-size: $delta;
+    }
 }
