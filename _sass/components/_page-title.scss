@@ -36,11 +36,7 @@
 		font-family: "Novecento Light";
 		font-weight: 400;
 		margin-bottom: 0;
-		font-size: $gamma;
-
-		@include mq($from: tablet) {
-			font-size: $beta;
-		}
+		font-size: $beta;
 
 		@include mq($from: desktop) {
 			font-size: $alpha;
